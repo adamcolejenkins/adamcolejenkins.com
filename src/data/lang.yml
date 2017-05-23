@@ -1,0 +1,46 @@
+hero:
+  intro: Hi, I'm Adam. I design & build
+  words:
+    - user interfaces.
+    - corporate websites.
+    - landing pages.
+    - web applications.
+    - web marketing components.
+  for_hire: I'm Available for Hire
+  more: Learn more about what I can do for you.
+
+experience:
+  heading: My Experience
+  subheading: I've got the chops in all phases of the design and development process.
+
+  research:
+    heading: Research
+    icon: assets/img/icon-research.svg
+    blurb: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati velit enim expedita sit nisi quia a impedit, animi minus, explicabo dolores quod blanditiis ipsum fugiat, consectetur, omnis tempora molestias at.
+
+  interface:
+    heading: UI/UX
+    icon: assets/img/icon-ui-ux.svg
+    blurb: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat eaque libero explicabo similique harum possimus exercitationem sit aut est labore culpa quam ab esse fugit, debitis suscipit consequuntur ex cumque!
+
+  code:
+    heading: Code
+    icon: assets/img/icon-code.svg
+    blurb: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem repellat enim nemo adipisci, voluptate distinctio quia odio error qui molestiae atque similique dolores aspernatur debitis rem minus maxime aliquid delectus.
+
+skills:
+  heading: Skills
+  subheading: I'm comfortable working with both back-end and front-end technologies.
+
+projects:
+  heading: My Work
+  subheading: Want to see more examples? Email me!
+
+about:
+  heading: About
+  subheading: My passion for elegance
+
+action:
+  heading: Want to work together?
+  subheading: I am currently accepting new projects and I would love to hear about yours. Please take a few minutes to tell me about it.
+  button: Get Started

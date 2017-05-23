@@ -1,0 +1,94 @@
+<section id="fullscreen-hero" class="hero section">
+  <div class="hero-content">
+
+    {{!-- Animated Intro Text --}}
+    <h1 class="cd-headline letters type">
+      <span>{{lang.hero.intro}}</span>
+      <span class="cd-words-wrapper">
+        {{#each lang.hero.words}}
+          <span {{#ifequal @index 0}}class="is-visible"{{/ifequal}}>{{this}}</span>
+        {{/each}}
+      </span>
+    </h1>
+
+    {{!-- Triggers --}}
+    <div class="show-for-small">
+      <a href="#resume" class="hollow button">Resumé</a>
+    </div>
+    <div class="page-scroll">
+      <a href="#contact-footer" class="hollow button">{{lang.hero.for_hire}}</a>
+    </div>
+    <div class="page-scroll learn-more">
+      <a href="#experience">
+        {{lang.hero.more}}
+        <br>
+        <i class="fa fa-chevron-down"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="experience section">
+  <hgroup class="section--header">
+    <h2>{{lang.experience.heading}}</h2>
+    <h3 class="subheader">{{lang.experience.subheading}}</h3>
+  </hgroup>
+
+  <div class="row text-center">
+    <div class="small-12 medium-4 columns">
+      <i class="fa fa-diamond"></i>
+      <h4>{{lang.experience.research.heading}}</h4>
+      <p>{{lang.experience.research.blurb}}</p>
+    </div>
+    <div class="small-12 medium-4 columns">
+      <i class="fa fa-tint"></i>
+      <h4>{{lang.experience.interface.heading}}</h4>
+      <p>{{lang.experience.interface.blurb}}</p>
+    </div>
+    <div class="small-12 medium-4 columns">
+      <i class="fa fa-code"></i>
+      <h4>{{lang.experience.code.heading}}</h4>
+      <p>{{lang.experience.code.blurb}}</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="skills section">
+  <hgroup class="section--header">
+    <h2>{{lang.skills.heading}}</h2>
+    <h3 class="subheader">{{lang.skills.subheading}}</h3>
+  </hgroup>
+
+</section>
+
+<section id="work" class="projects section">
+  <hgroup class="section--header">
+    <h2>{{lang.projects.heading}}</h2>
+    <h3 class="subheader">{{lang.projects.subheading}}</h3>
+  </hgroup>
+
+  {{#each projects as |project|}}
+  <div class="project">
+    <div class="project--info">
+      <h4 class="project--info">{{title}}</h4>
+    </div>
+    <div class="project--thumbnail">
+      <img src="{{root}}{{project.thumbnail}}" alt="{{project.title}} Showcase">
+    </div>
+  </div>
+  <div class="project--testimonial">
+    <blockquote>
+      <p></p>
+      <cite></cite>
+    </blockquote>
+  </div>
+  {{/each}}
+</section>
+
+<section id="contact" class="action section">
+  <hgroup class="section--header">
+    <h2>{{lang.action.heading}}</h2>
+    <h3 class="subheader">{{lang.action.subheading}}</h3>
+  </hgroup>
+
+</section>

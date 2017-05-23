@@ -1,0 +1,32 @@
+-
+  title: University of Missouri School of Medicine
+  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam unde vitae culpa eaque accusamus placeat, reiciendis ipsa possimus earum perferendis velit quaerat ducimus, facilis aut dolorum fugiat dolore asperiores explicabo incidunt omnis doloribus ullam! Molestiae ab consectetur laborum, esse distinctio voluptas eligendi ea itaque at ad? Culpa, quas atque id.
+  website: https://medicine.missouri.edu
+  thumbnail: assets/img/thumbnail-school-of-medicine.png
+  tags: UI/UX Design, WordPress Theme Development
+  testimonial:
+    quote: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, est."
+    cite: Jane Doe, MU Health
+    thumbnail: https://api.adorable.io/avatars/100/adamcole
+
+-
+  title: Mizzou Biojoint™ Center
+  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, optio! Eligendi explicabo voluptas architecto molestiae, similique dignissimos iusto tempora rem harum voluptatem officiis qui reiciendis nostrum sed accusantium velit, fugit numquam. Laudantium officia, non itaque officiis blanditiis voluptatem, qui. Velit, totam excepturi maiores aliquam dicta ab ipsam sapiente assumenda commodi!
+  website: https://biojoint.com
+  thumbnail: assets/img/thumbnail-mizzou-biojoint-center.png
+  tags: UI/UX Design, Handcoded using Zurb Foundation
+  testimonial:
+    quote: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, est."
+    cite: Jane Doe, MU Health
+    thumbnail: https://api.adorable.io/avatars/100/janedoe
+
+-
+  title: A World Without Cancer
+  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et alias deserunt dicta explicabo enim modi officiis sapiente dolores adipisci id sunt ab perferendis praesentium obcaecati sit saepe itaque in incidunt cumque quasi a dolore tempora, eveniet odit. Laboriosam quam fugiat animi deserunt quasi, rem, dignissimos officiis consectetur obcaecati quaerat voluptatibus.
+  website: http://aworldwithoutcancer.com
+  thumbnail: assets/img/thumbnail-a-world-without-cancer.png
+  tags: UI/UX Design, Handcoded using Zurb Foundation
+  testimonial:
+    quote: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, est."
+    cite: Jane Doe, MU Health
+    thumbnail: https://api.adorable.io/avatars/100/bobhope
