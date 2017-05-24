@@ -73,14 +73,19 @@
       <h4 class="project--info">{{title}}</h4>
     </div>
     <div class="project--thumbnail">
-      <img src="{{root}}{{project.thumbnail}}" alt="{{project.title}} Showcase">
+      <img src="{{root}}assets/img/{{project.thumbnail}}.png" alt="{{project.title}} Showcase" data-interchange="[{{root}}assets/img/{{project.thumbnail}}@2x.png, retina]">
     </div>
   </div>
-  <div class="project--testimonial">
+  <div class="testimonial">
+    {{#each project.testimonials as |testimonial|}}
     <blockquote>
-      <p></p>
-      <cite></cite>
+      <p>{{testimonial.quote}}</p>
+      <cite>
+        <img class="testimonial--thumbnail" src="{{testimonial.thumbnail}}" alt="{{testimonial.cite}}">
+        {{testimonial.cite}}
+      </cite>
     </blockquote>
+    {{/each}}
   </div>
   {{/each}}
 </section>
