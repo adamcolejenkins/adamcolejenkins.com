@@ -77,7 +77,8 @@
   {{#each projects as |project|}}
   <div class="project">
     <div class="project--info">
-      <h4 class="project--info">{{title}}</h4>
+      <h4 class="project--title">{{title}}</h4>
+
     </div>
     <div class="project--thumbnail">
       <img src="{{root}}assets/img/{{project.thumbnail}}.png" alt="{{project.title}} Showcase" data-interchange="[{{root}}assets/img/{{project.thumbnail}}@2x.png, retina]">
@@ -95,12 +96,4 @@
     {{/each}}
   </div>
   {{/each}}
-</section>
-
-<section id="contact" class="action section">
-  <hgroup class="section--header">
-    <h2>{{lang.action.heading}}</h2>
-    <h3 class="subheader">{{lang.action.subheading}}</h3>
-  </hgroup>
-
 </section>
