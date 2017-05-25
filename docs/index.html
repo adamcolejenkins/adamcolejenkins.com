@@ -5,45 +5,51 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adam Cole Jenkins | Full Stack Developer</title>
+    <title>Adam Cole Jenkins | Full Stack Designer &amp; Developer</title>
     <link rel="stylesheet" href="assets/css/app.css">
     <script src="https://use.fontawesome.com/d6433e3492.js"></script>
   </head>
-  <body>
+  <body data-app>
 
     <header role="banner">
       <div class="top-bar">
-        
+
       </div>
     </header>
 
     <section class="content" id="content" role="main">
       <section id="fullscreen-hero" class="hero section">
-        <div class="hero-content">
+        <div class="hero__container">
+          <div class="hero__content">
       
-          <h1 class="cd-headline letters type">
-            <span>Hi, I&#x27;m Adam. I design &amp; build</span>
-            <span class="cd-words-wrapper">
-                <span class="is-visible">user interfaces.</span>
-                <span >corporate websites.</span>
-                <span >landing pages.</span>
-                <span >web applications.</span>
-                <span >web marketing components.</span>
-            </span>
-          </h1>
-      
-          <div class="show-for-small">
-            <a href="#resume" class="hollow button">Resumé</a>
-          </div>
-          <div class="page-scroll">
-            <a href="#contact-footer" class="hollow button">I&#x27;m Available for Hire</a>
-          </div>
-          <div class="page-scroll learn-more">
-            <a href="#experience">
-              Learn more about what I can do for you.
-              <br>
-              <i class="fa fa-chevron-down"></i>
+            <a href="" class="hero__signature">
+              <img src="http://placehold.it/100x100?text=logo" alt="Adam Cole Jenkins">
             </a>
+      
+            <h1 class="headline">
+              <span class="intro">Hi, I&#x27;m Adam. I design &amp; build</span>
+              <span data-headline></span>
+              <span data-headline-words>
+                  <p>user interfaces.</p>
+                  <p>corporate websites.</p>
+                  <p>landing pages.</p>
+                  <p>web applications.</p>
+                  <p>web marketing components.</p>
+              </span>
+            </h1>
+      
+            <div class="button-group">
+              <a href="#resume" class="white button hide-for-large">Resumé</a>
+              <a href="#get-started" class="white button">I&#x27;m Available for Hire</a>
+            </div>
+      
+            <div class="hero__page-scroll">
+              <a href="#experience">
+                Learn more about what I do
+                <i class="fa fa-chevron-down"></i>
+              </a>
+            </div>
+      
           </div>
         </div>
       </section>
@@ -55,17 +61,17 @@
         </hgroup>
       
         <div class="row text-center">
-          <div class="small-12 medium-4 columns">
+          <div class="experience--item">
             <i class="fa fa-diamond"></i>
             <h4>Research</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati velit enim expedita sit nisi quia a impedit, animi minus, explicabo dolores quod blanditiis ipsum fugiat, consectetur, omnis tempora molestias at.</p>
           </div>
-          <div class="small-12 medium-4 columns">
+          <div class="experience--item">
             <i class="fa fa-tint"></i>
             <h4>UI/UX</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat eaque libero explicabo similique harum possimus exercitationem sit aut est labore culpa quam ab esse fugit, debitis suscipit consequuntur ex cumque!</p>
           </div>
-          <div class="small-12 medium-4 columns">
+          <div class="experience--item">
             <i class="fa fa-code"></i>
             <h4>Code</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem repellat enim nemo adipisci, voluptate distinctio quia odio error qui molestiae atque similique dolores aspernatur debitis rem minus maxime aliquid delectus.</p>
@@ -89,54 +95,58 @@
       
         <div class="project">
           <div class="project--info">
-            <h4 class="project--info">University of Missouri School of Medicine</h4>
+            <h4 class="project--title">University of Missouri School of Medicine</h4>
+      
           </div>
           <div class="project--thumbnail">
-            <img src="assets/img/thumbnail-school-of-medicine.png" alt="University of Missouri School of Medicine Showcase">
+            <img src="assets/img/thumbnail-school-of-medicine.png" alt="University of Missouri School of Medicine Showcase" data-interchange="[assets/img/thumbnail-school-of-medicine@2x.png, retina]">
           </div>
         </div>
-        <div class="project--testimonial">
+        <div class="testimonial">
           <blockquote>
-            <p></p>
-            <cite></cite>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, est.</p>
+            <cite>
+              <img class="testimonial--thumbnail" src="https://api.adorable.io/avatars/100/adamcole" alt="Jane Doe, MU Health">
+              Jane Doe, MU Health
+            </cite>
           </blockquote>
         </div>
         <div class="project">
           <div class="project--info">
-            <h4 class="project--info">Mizzou Biojoint™ Center</h4>
+            <h4 class="project--title">Mizzou Biojoint™ Center</h4>
+      
           </div>
           <div class="project--thumbnail">
-            <img src="assets/img/thumbnail-mizzou-biojoint-center.png" alt="Mizzou Biojoint™ Center Showcase">
+            <img src="assets/img/thumbnail-mizzou-biojoint-center.png" alt="Mizzou Biojoint™ Center Showcase" data-interchange="[assets/img/thumbnail-mizzou-biojoint-center@2x.png, retina]">
           </div>
         </div>
-        <div class="project--testimonial">
+        <div class="testimonial">
           <blockquote>
-            <p></p>
-            <cite></cite>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, est.</p>
+            <cite>
+              <img class="testimonial--thumbnail" src="https://api.adorable.io/avatars/100/janedoe" alt="Jane Doe, MU Health">
+              Jane Doe, MU Health
+            </cite>
           </blockquote>
         </div>
         <div class="project">
           <div class="project--info">
-            <h4 class="project--info">A World Without Cancer</h4>
+            <h4 class="project--title">A World Without Cancer</h4>
+      
           </div>
           <div class="project--thumbnail">
-            <img src="assets/img/thumbnail-a-world-without-cancer.png" alt="A World Without Cancer Showcase">
+            <img src="assets/img/thumbnail-a-world-without-cancer.png" alt="A World Without Cancer Showcase" data-interchange="[assets/img/thumbnail-a-world-without-cancer@2x.png, retina]">
           </div>
         </div>
-        <div class="project--testimonial">
+        <div class="testimonial">
           <blockquote>
-            <p></p>
-            <cite></cite>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, est.</p>
+            <cite>
+              <img class="testimonial--thumbnail" src="https://api.adorable.io/avatars/100/bobhope" alt="Jane Doe, MU Health">
+              Jane Doe, MU Health
+            </cite>
           </blockquote>
         </div>
-      </section>
-      
-      <section id="contact" class="action section">
-        <hgroup class="section--header">
-          <h2>Want to work together?</h2>
-          <h3 class="subheader">I am currently accepting new projects and I would love to hear about yours. Please take a few minutes to tell me about it.</h3>
-        </hgroup>
-      
       </section>
       
     </section>
