@@ -1,29 +1,36 @@
 <section id="fullscreen-hero" class="hero section">
-  <div class="hero-content">
+  <div class="hero__container">
+    <div class="hero__content">
 
-    {{!-- Animated Intro Text --}}
-    <h1 class="cd-headline letters type">
-      <span>{{lang.hero.intro}}</span>
-      <span class="cd-words-wrapper">
-        {{#each lang.hero.words}}
-          <span {{#ifequal @index 0}}class="is-visible"{{/ifequal}}>{{this}}</span>
-        {{/each}}
-      </span>
-    </h1>
-
-    {{!-- Triggers --}}
-    <div class="show-for-small">
-      <a href="#resume" class="hollow button">Resumé</a>
-    </div>
-    <div class="page-scroll">
-      <a href="#contact-footer" class="hollow button">{{lang.hero.for_hire}}</a>
-    </div>
-    <div class="page-scroll learn-more">
-      <a href="#experience">
-        {{lang.hero.more}}
-        <br>
-        <i class="fa fa-chevron-down"></i>
+      <a href="{{root}}" class="hero__signature">
+        <img src="http://placehold.it/100x100?text=logo" alt="{{site.title}}">
       </a>
+
+      {{!-- Animated Intro Text --}}
+      <h1 class="headline">
+        <span class="intro">{{lang.hero.intro}}</span>
+        <span data-headline></span>
+        <span data-headline-words>
+          {{#each lang.hero.words}}
+            <p>{{this}}</p>
+          {{/each}}
+        </span>
+      </h1>
+
+      {{!-- Triggers --}}
+      <div class="button-group">
+        <a href="#resume" class="white button hide-for-large">Resumé</a>
+        <a href="#get-started" class="white button">{{lang.hero.for_hire}}</a>
+      </div>
+
+      {{!-- Learn More --}}
+      <div class="hero__page-scroll">
+        <a href="#experience">
+          {{lang.hero.more}}
+          <i class="fa fa-chevron-down"></i>
+        </a>
+      </div>
+
     </div>
   </div>
 </section>

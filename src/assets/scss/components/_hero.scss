@@ -1,0 +1,105 @@
+// AdamColeJenkins.com
+// Copyright 2017
+
+// Hero Content Columns
+// @type Number
+$hero-content-columns: 8 !default;
+
+// Hero Content Color
+// @type Color
+$hero-content-color: $white !default;
+
+// Hero Background Gradient Overlay?
+// @type Boolean
+$hero-bg-gradient-overlay: true !default;
+
+// Hero Background Gradient Start color
+// @type Color
+$hero-bg-from: $primary-color !default;
+
+// Hero Background Gradient End color
+// @type Color
+$hero-bg-to: $secondary-color !default;
+
+// Hero Background Opacity
+// @type Number
+$hero-bg-opacity: .8 !default;
+
+// Hero Background Angle
+// @type
+$hero-bg-angle: 145deg !default;
+
+// Opacity of Learn More button
+// @type Number
+$hero-more-opacity: .5 !default;
+
+// Font-size of learn more arrow
+// @type Number
+$hero-more-icon-size: 1.5rem !default;
+
+
+.hero {
+  background-color: $secondary-color;
+  background-image: url('../img/hero-background-tablet.jpg');
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  z-index: 0;
+
+  * { color: $hero-content-color }
+
+  @if $hero-bg-gradient-overlay {
+    &::before {
+      @include position(absolute, 0 0 0 0);
+      background-image: linear-gradient($hero-bg-angle, $hero-bg-from 0, $hero-bg-to 100%);
+      content: '';
+      opacity: $hero-bg-opacity;
+      z-index: 1;
+    }
+  }
+
+  &__container {
+    @include flex-grid-row;
+    @include flex-align(center, middle);
+    min-height: inherit;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__content {
+    @include flex-grid-column;
+    text-align: center;
+  }
+
+  &__signature {
+    @include position(absolute, $global-margin null null 50%);
+    transform: translateX(-50%);
+  }
+
+  &__page-scroll {
+    @include position(absolute, null null $global-margin 50%);
+    transform: translateX(-50%);
+    opacity: .5;
+
+    a { display: block; }
+
+    i {
+      color: inherit;
+      display: block;
+      font-size: 1.5rem;
+    }
+  }
+
+  .button-group {
+    margin-top: $global-margin;
+  }
+
+  @include breakpoint(medium) {
+    background-image: url('../img/hero-background-desktop.jpg');
+
+    &__content {
+      @include flex-grid-size($hero-content-columns);
+    }
+  };
+}
