@@ -13,11 +13,14 @@ import fs       from 'fs';
 // Load all Gulp plugins into one variable
 const $ = plugins();
 
+// Load settings from settings.yml
+const { COMPATIBILITY, PORT, UNCSS_OPTIONS, PATHS } = loadConfig();
+
 // Check for --production flag
 const PRODUCTION = !!(yargs.argv.production);
 
-// Load settings from settings.yml
-const { COMPATIBILITY, PORT, UNCSS_OPTIONS, PATHS } = loadConfig();
+// Set build directory based on --production flag
+const BUILD_DIRECTORY = PRODUCTION ? PATHS.dist : PATHS.build;
 
 function loadConfig() {
   let ymlFile = fs.readFileSync('config.yml', 'utf8');
@@ -36,13 +39,14 @@ gulp.task('default',
 // This happens every time a build starts
 function clean(done) {
   rimraf(PATHS.dist, done);
+  rimraf(PATHS.build, done);
 }
 
 // Copy files out of the assets folder
 // This task skips over the "img", "js", and "scss" folders, which are parsed separately
 function copy() {
   return gulp.src(PATHS.assets)
-    .pipe(gulp.dest(PATHS.dist + '/assets'));
+    .pipe(gulp.dest(BUILD_DIRECTORY + '/assets'));
 }
 
 // Copy page templates into finished HTML files
@@ -55,7 +59,7 @@ function pages() {
       data: 'src/data/',
       helpers: 'src/helpers/'
     }))
-    .pipe(gulp.dest(PATHS.dist));
+    .pipe(gulp.dest(BUILD_DIRECTORY));
 }
 
 // Load updated HTML templates and partials into Panini
@@ -67,7 +71,7 @@ function resetPages(done) {
 // Generate a style guide from the Markdown content and HTML template in styleguide/
 function styleGuide(done) {
   sherpa('src/styleguide/index.md', {
-    output: PATHS.dist + '/styleguide.html',
+    output: BUILD_DIRECTORY + '/styleguide.html',
     template: 'src/styleguide/template.html'
   }, done);
 }
@@ -88,7 +92,7 @@ function sass() {
     //.pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
     .pipe($.if(PRODUCTION, $.cssnano()))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest(PATHS.dist + '/assets/css'))
+    .pipe(gulp.dest(BUILD_DIRECTORY + '/assets/css'))
     .pipe(browser.reload({ stream: true }));
 }
 
@@ -103,7 +107,7 @@ function javascript() {
       .on('error', e => { console.log(e); })
     ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest(PATHS.dist + '/assets/js'));
+    .pipe(gulp.dest(BUILD_DIRECTORY + '/assets/js'));
 }
 
 // Copy images to the "dist" folder
@@ -113,13 +117,13 @@ function images() {
     .pipe($.if(PRODUCTION, $.imagemin({
       progressive: true
     })))
-    .pipe(gulp.dest(PATHS.dist + '/assets/img'));
+    .pipe(gulp.dest(BUILD_DIRECTORY + '/assets/img'));
 }
 
 // Start a server with BrowserSync to preview the site in
 function server(done) {
   browser.init({
-    server: PATHS.dist, port: PORT
+    server: BUILD_DIRECTORY, port: PORT
   });
   done();
 }
