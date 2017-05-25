@@ -1,11 +1,11 @@
 
 // Top and bottom padding on sections
 // @type Number
-$section-padding: rem-calc(80px 0) !default;
+$section-padding: padding(4) 0 !default;
 
 // Bottom margin of section header
 // @type Number
-$section-header-margin-bottom: $global-margin * 2 !default;
+$section-header-margin-bottom: margin(3) !default;
 
 .section {
   padding: $section-padding;

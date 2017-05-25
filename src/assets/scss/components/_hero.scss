@@ -73,12 +73,12 @@ $hero-more-icon-size: 1.5rem !default;
   }
 
   &__signature {
-    @include position(absolute, $global-margin null null 50%);
+    @include position(absolute, margin(3) null null 50%);
     transform: translateX(-50%);
   }
 
   &__page-scroll {
-    @include position(absolute, null null $global-margin 50%);
+    @include position(absolute, null null margin(3) 50%);
     transform: translateX(-50%);
     opacity: .5;
 
@@ -92,7 +92,7 @@ $hero-more-icon-size: 1.5rem !default;
   }
 
   .button-group {
-    margin-top: $global-margin;
+    margin-top: margin();
   }
 
   @include breakpoint(medium) {
