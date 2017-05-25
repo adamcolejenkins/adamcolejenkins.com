@@ -1,0 +1,13 @@
+
+// Button Border Width
+// @type Number
+$button-border-width: 2px !default;
+
+// Button text transform
+// @type
+$button-text-transform: uppercase !default;
+
+.button {
+  border-width: $button-border-width !important;
+  text-transform: $button-text-transform;
+}
