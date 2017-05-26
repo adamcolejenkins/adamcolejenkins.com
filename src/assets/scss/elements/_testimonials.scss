@@ -1,0 +1,56 @@
+// Testimonials
+// adamcolejenkins.com
+// Licensed under Apache 2.0
+
+//
+// @group Elements
+//
+
+// Testimonial border color
+// @type Color
+$testimonial-border-color: lighten($medium-gray, 25%);
+
+// Testimonial spacing top & bottom
+// @type Number
+$testimonial-spacing: margin(4) !default;
+
+// Quote left/right padding
+// @type Number
+$testimonial-quote-padding: padding(10) !default;
+
+// Quote font size
+// @type Number
+$testimonial-quote-font-size: 1.25rem !default;
+
+// Thumbnail size
+// @type Number
+$testimonial-thumbnail-size: rem-calc(50px) !default;
+
+// Thumbnail radius
+// @type Number
+$testimonial-thumbnail-radius: 50% !default;
+
+// Testimonial styles
+.testimonial {
+  @include divider($testimonial-border-color, $testimonial-spacing);
+  display: block;
+  text-align: center;
+
+  // Quote styles
+  &__quote {
+    font-size: $testimonial-quote-font-size;
+
+    @include breakpoint(medium) {
+      padding-left: $testimonial-quote-padding;
+      padding-right: $testimonial-quote-padding;
+    };
+  }
+
+  // Thumbnail styles
+  &__thumbnail {
+    width: $testimonial-thumbnail-size;
+    height: $testimonial-thumbnail-size;
+    border-radius: $testimonial-thumbnail-radius;
+    margin-right: margin();
+  }
+}
