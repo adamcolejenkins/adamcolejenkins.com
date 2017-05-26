@@ -21,12 +21,7 @@ $section-header-margin-bottom: margin(3) !default;
     margin-bottom: $section-header-margin-bottom;
     text-align: center;
 
-    h2 {
-      font-weight: $global-weight-normal;
-      text-transform: uppercase;
-    }
-
-    h3 {
+    .subheader {
       font-size: 1rem;
       font-style: italic;
     }
