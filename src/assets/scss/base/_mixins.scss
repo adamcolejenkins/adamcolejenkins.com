@@ -30,6 +30,48 @@ $global-timing: ease !default;
   transition: $property $duration $timing;
 }
 
+// Creates spacing with a divider for elements based on side
+//
+// @TODO: Write better divider mixin
+//
+// @param {Color}   $border-color - The color of the border
+// @param {Number}  $spacing      - Margin/Padding top/bottom
+// @param {Keyword} $sides        - both, top, bottom
+@mixin divider(
+  $border-color: $medium-gray,
+  $spacing: margin(),
+  $sides: both
+) {
+
+  // Defaults
+  $border-top-size: 0;
+  $border-bottom-size: 0;
+  $margin-top: 0;
+  $margin-bottom: 0;
+  $padding-top: 0;
+  $padding-bottom: 0;
+
+  @if $sides == top or $sides == both {
+    $border-top-size: 1px;
+    $margin-top: $spacing;
+    $padding-top: $spacing;
+  }
+
+  @if $sides == bottom or $sides == both {
+    $border-bottom-size: 1px;
+    $margin-bottom: $spacing;
+    $padding-bottom: $spacing;
+  }
+
+  border-top: $border-top-size solid $border-color;
+  border-bottom: $border-bottom-size solid $border-color;
+  margin-top: $margin-top;
+  margin-bottom: $margin-bottom;
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+
+}
+
 
 // Hover card background color
 // @type Color
