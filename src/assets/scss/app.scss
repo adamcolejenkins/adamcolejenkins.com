@@ -56,11 +56,15 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+// Base
+@import 'base/typography';
+
 // Custom animations
 @import 'animations/keyframes';
 @import 'animations/typing';
 
 // Custom components
+@import 'components/sections';
 @import 'components/experience';
 @import 'components/hero';
 

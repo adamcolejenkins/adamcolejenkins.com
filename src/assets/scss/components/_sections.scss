@@ -1,0 +1,29 @@
+
+// Top and bottom padding on sections
+// @type Number
+$section-padding: padding(4) 0 !default;
+
+// Bottom margin of section header
+// @type Number
+$section-header-margin-bottom: margin(3) !default;
+
+.section {
+  padding: $section-padding;
+
+  &__header,
+  &__content {
+    @include flex-grid-row;
+  }
+
+  &__header {
+    @include flex-grid-column;
+    display: block;
+    margin-bottom: $section-header-margin-bottom;
+    text-align: center;
+
+    .subheader {
+      font-size: 1rem;
+      font-style: italic;
+    }
+  }
+}

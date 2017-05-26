@@ -1,2 +1,10 @@
 // Custom Mixins
 // @group Base
+
+@function margin( $times: 1, $margin: $global-margin ) {
+  @return $margin * $times;
+}
+
+@function padding( $times: 1, $padding: $global-padding ) {
+  @return $padding * $times;
+}

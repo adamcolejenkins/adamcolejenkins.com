@@ -1,4 +1,4 @@
-<section id="fullscreen-hero" class="hero section">
+<section id="fullscreen-hero" class="hero">
   <div class="hero__container">
     <div class="hero__content">
 
@@ -36,24 +36,24 @@
 </section>
 
 <section id="experience" class="experience section">
-  <hgroup class="section--header">
+  <hgroup class="section__header">
     <h2>{{lang.experience.heading}}</h2>
     <h3 class="subheader">{{lang.experience.subheading}}</h3>
   </hgroup>
 
-  <div class="row text-center">
-    <div class="experience--item">
-      <i class="fa fa-diamond"></i>
+  <div class="section__content">
+    <div class="experience__item">
+      <i class="fa fa-3x fa-diamond"></i>
       <h4>{{lang.experience.research.heading}}</h4>
       <p>{{lang.experience.research.blurb}}</p>
     </div>
-    <div class="experience--item">
-      <i class="fa fa-tint"></i>
+    <div class="experience__item">
+      <i class="fa fa-3x fa-tint"></i>
       <h4>{{lang.experience.interface.heading}}</h4>
       <p>{{lang.experience.interface.blurb}}</p>
     </div>
-    <div class="experience--item">
-      <i class="fa fa-code"></i>
+    <div class="experience__item">
+      <i class="fa fa-3x fa-code"></i>
       <h4>{{lang.experience.code.heading}}</h4>
       <p>{{lang.experience.code.blurb}}</p>
     </div>
@@ -61,39 +61,44 @@
 </section>
 
 <section id="skills" class="skills section">
-  <hgroup class="section--header">
+  <hgroup class="section__header">
     <h2>{{lang.skills.heading}}</h2>
     <h3 class="subheader">{{lang.skills.subheading}}</h3>
   </hgroup>
 
+  <div class="section__content">
+
+  </div>
 </section>
 
 <section id="work" class="projects section">
-  <hgroup class="section--header">
+  <hgroup class="section__header">
     <h2>{{lang.projects.heading}}</h2>
     <h3 class="subheader">{{lang.projects.subheading}}</h3>
   </hgroup>
 
-  {{#each projects as |project|}}
-  <div class="project">
-    <div class="project--info">
-      <h4 class="project--title">{{title}}</h4>
+  <div class="section__content">
+    {{#each projects as |project|}}
+    <div class="project">
+      <div class="project--info">
+        <h4 class="project--title">{{title}}</h4>
 
+      </div>
+      <div class="project--thumbnail">
+        <img src="{{root}}assets/img/{{project.thumbnail}}.png" alt="{{project.title}} Showcase" data-interchange="[{{root}}assets/img/{{project.thumbnail}}@2x.png, retina]">
+      </div>
     </div>
-    <div class="project--thumbnail">
-      <img src="{{root}}assets/img/{{project.thumbnail}}.png" alt="{{project.title}} Showcase" data-interchange="[{{root}}assets/img/{{project.thumbnail}}@2x.png, retina]">
+    <div class="testimonial">
+      {{#each project.testimonials as |testimonial|}}
+      <blockquote>
+        <p>{{testimonial.quote}}</p>
+        <cite>
+          <img class="testimonial--thumbnail" src="{{testimonial.thumbnail}}" alt="{{testimonial.cite}}">
+          {{testimonial.cite}}
+        </cite>
+      </blockquote>
+      {{/each}}
     </div>
-  </div>
-  <div class="testimonial">
-    {{#each project.testimonials as |testimonial|}}
-    <blockquote>
-      <p>{{testimonial.quote}}</p>
-      <cite>
-        <img class="testimonial--thumbnail" src="{{testimonial.thumbnail}}" alt="{{testimonial.cite}}">
-        {{testimonial.cite}}
-      </cite>
-    </blockquote>
     {{/each}}
   </div>
-  {{/each}}
 </section>

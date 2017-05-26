@@ -1,0 +1,32 @@
+
+$experience-icon-color: $secondary-color !default;
+
+$experience-header-color: $primary-color !default;
+
+$experience-header-transorm: uppercase !default;
+
+$experience-columns: 4 !default;
+
+.experience {
+
+  &__item {
+    @include flex-grid-column;
+    border-radius: $global-radius;
+    padding-top: padding();
+    text-align: center;
+    transition: all 0.3s ease;
+
+    @include breakpoint(medium) {
+      @include flex-grid-size($experience-columns);
+    };
+
+    &:hover {
+      background-color: $light-gray;
+    }
+
+    > * {
+      margin-bottom: margin();
+    }
+  }
+
+}

@@ -1,0 +1,13 @@
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+h2 {
+  @extend .uppercase;
+}
+
+h4 {
+  @extend .uppercase;
+  color: $primary-color;
+}
