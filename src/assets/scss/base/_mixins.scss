@@ -14,14 +14,27 @@ $global-duration: 0.3s !default;
 // @type Function
 $global-timing: ease !default;
 
+// Multiplies global margin for spacing
+//
+// @param {Number} $times  - Multipler
+// @param {Number} $margin - The number to multiply
 @function margin( $times: 1, $margin: $global-margin ) {
   @return $margin * $times;
 }
 
+// Multiplies global padding for spacing
+//
+// @param {Number} $times  - Multipler
+// @param {Number} $margin - The number to multiply
 @function padding( $times: 1, $padding: $global-padding ) {
   @return $padding * $times;
 }
 
+// Global transition mixins
+//
+// @param {Property} $property - CSS property to animate
+// @param {Number}   $duration - Duration of transition
+// @param {Function} $timing   - The easing function
 @mixin transition(
   $property: all,
   $duration: $global-duration,
