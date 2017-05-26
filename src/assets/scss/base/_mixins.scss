@@ -29,6 +29,33 @@ $global-timing: ease !default;
 ) {
   transition: $property $duration $timing;
 }
+
+
+// Hover card background color
+// @type Color
+$hover-card-bg-color: $light-gray !default;
+
+// Hover animation border radius
+// @type Number
+$hover-card-border-radius: $global-radius !default;
+
+// Creates a hover card-like animation
+//
+// @param {Color}  $bg-color     - Color of the background
+// @param {Number} $radius       - Border radius of card
+// @param {Number} $padding-top  - Top padding to add
+@mixin hover-card(
+  $bg-color: $hover-card-bg-color,
+  $radius:   $hover-card-border-radius,
+  $padding-top: padding()
+) {
+  border-radius: $radius;
+  padding-top: $padding-top;
+  @include transition(background-color);
+  &:hover { background-color: $bg-color; }
+}
+
+
 // Placeholder image for background cover
 // @type String
 $background-cover-placeholder: 'http://placehold.it/1440x1024' !default;

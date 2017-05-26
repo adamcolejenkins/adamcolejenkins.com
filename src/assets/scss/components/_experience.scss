@@ -2,9 +2,6 @@
 // adamcolejenkins.com
 // Licensed under Apache 2.0
 
-// Hover color for each experience item
-// @type Color
-$experience-item-bg-color: $light-gray !default;
 //
 // @group Components
 //
@@ -13,26 +10,20 @@ $experience-item-bg-color: $light-gray !default;
 // @type Number
 $experience-columns: 4 !default;
 
+// Experience section styles
 .experience {
 
   &__item {
-    @include flex-grid-column;
-    border-radius: $global-radius;
-    padding-top: padding();
+    @include flex-grid-column(12);
+    @include hover-card;
     text-align: center;
-    @include transition();
 
     @include breakpoint(medium) {
       @include flex-grid-size($experience-columns);
     };
 
-    &:hover {
-      background-color: $experience-item-bg-color;
-    }
-
-    > * {
-      margin-bottom: margin();
-    }
+    // Add spacing between child elements
+    > * { margin-bottom: margin(); }
   }
 
 }
