@@ -1,10 +1,17 @@
+// Custom button overrides
+// adamcolejenkins.com
+// Licensed under Apache 2.0
+
+//
+// @group Elements
+//
 
 // Button Border Width
 // @type Number
 $button-border-width: 2px !default;
 
 // Button text transform
-// @type
+// @type Keyword
 $button-text-transform: uppercase !default;
 
 .button {

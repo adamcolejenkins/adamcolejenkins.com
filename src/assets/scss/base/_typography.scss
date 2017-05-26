@@ -1,7 +1,13 @@
+// Custom Typography
+// adamcolejenkins.com
+// Licensed under Apache 2.0
 
 .uppercase {
   text-transform: uppercase;
 }
+//
+// @group Typography
+//
 
 a {
   @include transition;
