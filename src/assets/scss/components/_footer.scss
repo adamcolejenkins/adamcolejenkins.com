@@ -1,0 +1,29 @@
+// Footer styles
+// adamcolejnkins.com
+// Licensed under Apache 2.0
+
+//
+// @group Components
+//
+
+$footer-bg-color: $secondary-color !default;
+
+$footer-text-color: $medium-gray !default;
+
+.footer {
+  background-color: $footer-bg-color;
+  color: $footer-text-color;
+
+  // Override section padding
+  &.section { padding-bottom: padding(); }
+
+  &__content {
+    @include flex-grid-column;
+    text-align: center;
+  }
+
+  .signature {
+    display: block;
+    margin-bottom: margin(3);
+  }
+}

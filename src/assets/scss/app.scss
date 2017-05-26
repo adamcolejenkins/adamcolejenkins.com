@@ -76,9 +76,11 @@ $google-fonts: unquote("Montserrat:400,700,700i|Varela+Round");
 // Custom components
 @import 'components/experience';
 @import 'components/hero';
+@import 'components/footer';
 @import 'components/projects';
 @import 'components/sections';
 
 // Custom elements
 @import 'elements/buttons';
+@import 'elements/social-icons';
 @import 'elements/testimonials';
