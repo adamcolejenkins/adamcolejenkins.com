@@ -1,10 +1,145 @@
 // Custom Mixins
-// @group Base
+// adamcolejenkins.com
+// Licensed under Apache 2.0
 
+//
+// @group Base
+//
+
+// Global animation duration
+// @type Number
+$global-duration: 0.3s !default;
+
+// Global animation timing
+// @type Function
+$global-timing: ease !default;
+
+// Multiplies global margin for spacing
+//
+// @param {Number} $times  - Multipler
+// @param {Number} $margin - The number to multiply
 @function margin( $times: 1, $margin: $global-margin ) {
   @return $margin * $times;
 }
 
+// Multiplies global padding for spacing
+//
+// @param {Number} $times  - Multipler
+// @param {Number} $margin - The number to multiply
 @function padding( $times: 1, $padding: $global-padding ) {
   @return $padding * $times;
+}
+
+// Global transition mixins
+//
+// @param {Property} $property - CSS property to animate
+// @param {Number}   $duration - Duration of transition
+// @param {Function} $timing   - The easing function
+@mixin transition(
+  $property: all,
+  $duration: $global-duration,
+  $timing: $global-timing
+) {
+  transition: $property $duration $timing;
+}
+
+// Creates spacing with a divider for elements based on side
+//
+// @TODO: Write better divider mixin
+//
+// @param {Color}   $border-color - The color of the border
+// @param {Number}  $spacing      - Margin/Padding top/bottom
+// @param {Keyword} $sides        - both, top, bottom
+@mixin divider(
+  $border-color: $medium-gray,
+  $spacing: margin(),
+  $sides: both
+) {
+
+  // Defaults
+  $border-top-size: 0;
+  $border-bottom-size: 0;
+  $margin-top: 0;
+  $margin-bottom: 0;
+  $padding-top: 0;
+  $padding-bottom: 0;
+
+  @if $sides == top or $sides == both {
+    $border-top-size: 1px;
+    $margin-top: $spacing;
+    $padding-top: $spacing;
+  }
+
+  @if $sides == bottom or $sides == both {
+    $border-bottom-size: 1px;
+    $margin-bottom: $spacing;
+    $padding-bottom: $spacing;
+  }
+
+  border-top: $border-top-size solid $border-color;
+  border-bottom: $border-bottom-size solid $border-color;
+  margin-top: $margin-top;
+  margin-bottom: $margin-bottom;
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+
+}
+
+
+// Hover card background color
+// @type Color
+$hover-card-bg-color: $light-gray !default;
+
+// Hover animation border radius
+// @type Number
+$hover-card-border-radius: $global-radius !default;
+
+// Creates a hover card-like animation
+//
+// @param {Color}  $bg-color     - Color of the background
+// @param {Number} $radius       - Border radius of card
+// @param {Number} $padding-top  - Top padding to add
+@mixin hover-card(
+  $bg-color: $hover-card-bg-color,
+  $radius:   $hover-card-border-radius,
+  $padding-top: padding()
+) {
+  border-radius: $radius;
+  padding-top: $padding-top;
+  @include transition(background-color);
+  &:hover { background-color: $bg-color; }
+}
+
+
+// Placeholder image for background cover
+// @type String
+$background-cover-placeholder: 'http://placehold.it/1440x1024' !default;
+
+// Fallback color for background cover
+// @type Color
+$background-cover-color: $secondary-color !default;
+
+// Position of the background
+// @type Keyword
+$background-cover-position: center !default;
+
+// Size of the background image
+// @type Mixed
+$background-cover-size: cover !default;
+
+// Sets the background image to full cover
+//
+// @param {String}  $bg-image - URL or path of the background image
+// @param {Color}   $bg-color - Fallback color
+// @param {Keyword} $bg-position - Position of background image
+@mixin background-cover(
+  $bg-image:    $background-cover-placeholder,
+  $bg-color:    $background-cover-color,
+  $bg-position: $background-cover-position,
+  $bg-size:     $background-cover-size
+) {
+  background-color: $bg-color;
+  background-image: url($bg-image);
+  background-position: $bg-position;
+  background-size: $background-cover-size;
 }

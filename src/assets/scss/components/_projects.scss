@@ -1,0 +1,76 @@
+// Projects component
+// adamcolejenkins.com
+// Licensed under Apache 2.0
+
+//
+// @group Components
+//
+
+// Background color of project section
+// @type Color
+$project-bg-color: $light-gray !default;
+
+// Spacing between projects
+// @type Number
+$project-spacing: margin(4) !default;
+
+// Project section styles
+.projects-section {
+  background-color: $project-bg-color;
+
+  @include breakpoint(medium) {
+    .section__content {
+      @include flex-align(center);
+    }
+  };
+}
+
+// Inividual project styles
+.project {
+
+  &__showcase,
+  &__testimonial {
+    @include flex-grid-row();
+    @include flex-align(center, middle);
+    margin-bottom: $project-spacing;
+  }
+
+  &__showcase &__blurb,
+  &__showcase &__thumbnail {
+    @include flex-grid-column(12);
+    text-align: center;
+
+    @include breakpoint(medium) {
+      @include flex-grid-size(5);
+      text-align: left;
+    };
+  }
+
+  &__testimonial > .testimonial {
+    @include flex-grid-column(10);
+  }
+
+  &:last-of-type &__showcase,
+  &:last-of-type &_testimonial { margin-bottom: 0; }
+  &:last-of-type &__testimonial {
+    margin-bottom: 0;
+
+    .testimonial {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  // Source ordering
+  &__showcase &__blurb { order: 2; }
+  &__showcase &__thumbnail { order: 1; }
+
+  @include breakpoint(medium) {
+    &__showcase &__blurb { order: 1; }
+    &__showcase &__thumbnail { order: 2; }
+    &:nth-of-type(even) &__blurb { order: 2; }
+    &:nth-of-type(even) &__thumbnail { order: 1 }
+  };
+
+}

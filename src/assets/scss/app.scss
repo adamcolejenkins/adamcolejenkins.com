@@ -1,10 +1,20 @@
 @charset 'utf-8';
+// Main stylesheet imports
+// adamcolejnkins.com
+// Licensed under Apache 2.0
+
+//
+// @group App
+//
 
 // Load Google Fonts
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,700i|Varela+Round');
+$google-fonts: unquote("Montserrat:400,700,700i|Varela+Round");
+@import url('https://fonts.googleapis.com/css?family=#{$google-fonts}');
 
+// Load Bourbon helpers
 @import 'bourbon/bourbon';
 
+// Load Foundation
 @import 'base/settings';
 @import 'base/mixins';
 @import 'foundation';
@@ -64,9 +74,11 @@
 @import 'animations/typing';
 
 // Custom components
-@import 'components/sections';
 @import 'components/experience';
 @import 'components/hero';
+@import 'components/projects';
+@import 'components/sections';
 
 // Custom elements
 @import 'elements/buttons';
+@import 'elements/testimonials';
