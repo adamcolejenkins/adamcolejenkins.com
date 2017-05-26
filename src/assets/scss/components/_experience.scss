@@ -1,10 +1,10 @@
 
-$experience-icon-color: $secondary-color !default;
+// Hover color for each experience item
+// @type Color
+$experience-item-bg-color: $light-gray !default;
 
-$experience-header-color: $primary-color !default;
-
-$experience-header-transorm: uppercase !default;
-
+// Number of columns for each experience item
+// @type Number
 $experience-columns: 4 !default;
 
 .experience {
@@ -14,14 +14,14 @@ $experience-columns: 4 !default;
     border-radius: $global-radius;
     padding-top: padding();
     text-align: center;
-    transition: all 0.3s ease;
+    @include transition();
 
     @include breakpoint(medium) {
       @include flex-grid-size($experience-columns);
     };
 
     &:hover {
-      background-color: $light-gray;
+      background-color: $experience-item-bg-color;
     }
 
     > * {

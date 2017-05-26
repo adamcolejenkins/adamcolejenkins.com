@@ -1,10 +1,26 @@
 // Custom Mixins
 // @group Base
 
+// Global animation duration
+// @type Number
+$global-duration: 0.3s !default;
+
+// Global animation timing
+// @type Function
+$global-timing: ease !default;
+
 @function margin( $times: 1, $margin: $global-margin ) {
   @return $margin * $times;
 }
 
 @function padding( $times: 1, $padding: $global-padding ) {
   @return $padding * $times;
+}
+
+@mixin transition(
+  $property: all,
+  $duration: $global-duration,
+  $timing: $global-timing
+) {
+  transition: $property $duration $timing;
 }

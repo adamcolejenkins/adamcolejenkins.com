@@ -3,6 +3,10 @@
   text-transform: uppercase;
 }
 
+a {
+  @include transition;
+}
+
 h2 {
   @extend .uppercase;
 }

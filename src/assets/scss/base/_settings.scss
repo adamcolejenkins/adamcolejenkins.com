@@ -80,6 +80,9 @@ $global-text-direction: ltr;
 $global-flexbox: false;
 $print-transparent-backgrounds: true;
 
+$global-duration: 0.3s;
+$global-timing: ease;
+
 @include add-foundation-colors;
 
 // 2. Breakpoints
