@@ -29,3 +29,35 @@ $global-timing: ease !default;
 ) {
   transition: $property $duration $timing;
 }
+// Placeholder image for background cover
+// @type String
+$background-cover-placeholder: 'http://placehold.it/1440x1024' !default;
+
+// Fallback color for background cover
+// @type Color
+$background-cover-color: $secondary-color !default;
+
+// Position of the background
+// @type Keyword
+$background-cover-position: center !default;
+
+// Size of the background image
+// @type Mixed
+$background-cover-size: cover !default;
+
+// Sets the background image to full cover
+//
+// @param {String}  $bg-image - URL or path of the background image
+// @param {Color}   $bg-color - Fallback color
+// @param {Keyword} $bg-position - Position of background image
+@mixin background-cover(
+  $bg-image:    $background-cover-placeholder,
+  $bg-color:    $background-cover-color,
+  $bg-position: $background-cover-position,
+  $bg-size:     $background-cover-size
+) {
+  background-color: $bg-color;
+  background-image: url($bg-image);
+  background-position: $bg-position;
+  background-size: $background-cover-size;
+}

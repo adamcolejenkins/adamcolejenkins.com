@@ -6,6 +6,13 @@
 // @group Components
 //
 
+// Background image for hero
+// @type String
+$hero-bg-image: '../img/hero-background-tablet.jpg' !default;
+
+// Background color for hero
+// @type Color
+$hero-bg-color: $secondary-color !default;
 
 // Hero Content Columns
 // @type Number
@@ -45,10 +52,7 @@ $hero-more-icon-size: 1.5rem !default;
 
 
 .hero {
-  background-color: $secondary-color;
-  background-image: url('../img/hero-background-tablet.jpg');
-  background-position: center;
-  background-size: cover;
+  @include background-cover($hero-bg-image, $hero-bg-color);
   min-height: 100vh;
   position: relative;
   z-index: 0;
@@ -102,8 +106,6 @@ $hero-more-icon-size: 1.5rem !default;
   }
 
   @include breakpoint(medium) {
-    background-image: url('../img/hero-background-desktop.jpg');
-
     &__content {
       @include flex-grid-size($hero-content-columns);
     }
