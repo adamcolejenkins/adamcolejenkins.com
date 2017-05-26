@@ -1,0 +1,53 @@
+// Social Media icons
+// adamcolejnkins.com
+// Licensed under Apache 2.0
+
+//
+// @group Elements
+//
+
+// Icon color
+// @type Color
+$social-icons-color: darken($secondary-color, 5%) !default;
+
+// Icon hover color
+// @type Color
+$social-icons-hover-color: $primary-color !default;
+
+// Icon border radius
+// @type Number
+$social-icon-border-radius: 50% !default;
+
+// Icon padding
+// @type Number
+$social-icon-padding: .35rem .7rem !default;
+
+// Icon spacing
+// @type Number
+$social-icon-spacing: margin(.5) !default;
+
+.social-icons {
+
+  > a {
+    background-color: $social-icons-color;
+    border-radius: $social-icon-border-radius;
+    color: lighten($social-icons-color, 20%);
+    display: inline-block;
+    padding: $social-icon-padding;
+
+    > i {
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    + a {
+      margin-left: $social-icon-spacing;
+    }
+
+    &:hover {
+      background-color: rgba($social-icons-hover-color, .2);
+      color: $social-icons-hover-color;
+    }
+  }
+}
