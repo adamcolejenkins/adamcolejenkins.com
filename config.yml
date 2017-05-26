@@ -19,8 +19,6 @@ UNCSS_OPTIONS:
 PATHS:
   # Path to dist folder
   dist: "docs"
-  # Path to build folder
-  build: "build"
   # Paths to static assets that aren't images, CSS, or JavaScript
   assets:
     - "src/assets/**/*"
