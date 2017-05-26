@@ -21,3 +21,55 @@ h4 {
   @extend .uppercase;
   color: $primary-color;
 }
+
+// Tag color
+// @type Color
+$tag-color: $medium-gray !default;
+
+// Tag bullet color
+// @type Color
+$tag-bullet-color: $primary-color !default;
+
+// Tag font family
+// @type Font
+$tag-font-family: $header-font-family !default;
+
+// Tag font size
+// @type Number
+$tag-font-size: $small-font-size !default;
+
+// Tag styles
+.tags {
+  font-family: $tag-font-family;
+  font-size: $tag-font-size;
+
+  // Since text is centered, remove bullet
+  @include breakpoint(small only) {
+    list-style: none;
+    margin-left: auto;
+    padding-left: auto;
+  };
+
+  // This allows for a different colored tag
+  color: $tag-bullet-color;
+  > li > span { color: $tag-color; }
+
+  // Strong modifier
+  &__strong {
+    font-weight: $global-weight-bold;
+    text-transform: uppercase;
+  }
+
+  // Inline modifier
+  &__inline {
+    @extend .no-bullet;
+
+    > li {
+      display: inline-block;
+
+      + li {
+        margin-left: margin(.5);
+      }
+    }
+  }
+}
