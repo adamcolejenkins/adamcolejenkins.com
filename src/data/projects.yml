@@ -4,11 +4,11 @@
   website: https://medicine.missouri.edu
   thumbnail: thumbnail-school-of-medicine
   tags: UI/UX Design, WordPress Theme Development
-  testimonials:
-    -
-      quote: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, est."
-      cite: Jane Doe, MU Health
-      thumbnail: https://api.adorable.io/avatars/100/adamcole
+  # testimonials:
+    # -
+    #   quote: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, est."
+    #   cite: Jane Doe, MU Health
+    #   thumbnail: https://api.adorable.io/avatars/100/adamcole
 
 -
   title: Mizzou Biojoint™ Center
@@ -16,11 +16,11 @@
   website: https://biojoint.com
   thumbnail: thumbnail-mizzou-biojoint-center
   tags: UI/UX Design, Handcoded using Zurb Foundation
-  testimonials:
-    -
-      quote: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, est."
-      cite: Jane Doe, MU Health
-      thumbnail: https://api.adorable.io/avatars/100/janedoe
+  # testimonials:
+  #   -
+  #     quote: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, est."
+  #     cite: Jane Doe, MU Health
+  #     thumbnail: https://api.adorable.io/avatars/100/janedoe
 
 -
   title: A World Without Cancer
@@ -30,6 +30,6 @@
   tags: UI/UX Design, Handcoded using Zurb Foundation
   testimonials:
     -
-      quote: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, est."
-      cite: Jane Doe, MU Health
-      thumbnail: https://api.adorable.io/avatars/100/bobhope
+      quote: "Adam's attention to detail is unparalleled, and he stays on the leading edge of website development."
+      cite: Justin Willett, MU Health Care
+      thumbnail: assets/img/testimonial-thumbnail-willett-justin.jpg

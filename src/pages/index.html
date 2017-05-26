@@ -19,7 +19,7 @@
 
       {{!-- Triggers --}}
       <div class="button-group">
-        <a href="#resume" class="white button hide-for-large">Resumé</a>
+        <a href="#resume" class="white button">Resumé</a>
         <a href="#get-started" class="white button">{{lang.hero.for_hire}}</a>
       </div>
 
@@ -71,32 +71,41 @@
   </div>
 </section>
 
-<section id="work" class="projects section">
+<section id="work" class="section projects-section">
   <hgroup class="section__header">
     <h2>{{lang.projects.heading}}</h2>
     <h3 class="subheader">{{lang.projects.subheading}}</h3>
   </hgroup>
 
   <div class="section__content">
-    {{#each projects as |project|}}
+  {{#each projects}}
     <div class="project">
-      <div class="project--info">
-        <h4 class="project--title">{{title}}</h4>
+      <div class="project__showcase">
+        <div class="project__blurb">
+          <h3>{{title}}</h3>
+          <ul class="project__tags tags tags__strong">
+            <li><span>{{tags}}</span></li>
+          </ul>
+          <p>{{description}}</p>
 
+          {{#if website}}
+            <p><a href="{{website}}" class="button">Visit Website</a></p>
+          {{/if}}
+        </div>
+        <div class="project__thumbnail">
+          <img src="{{root}}assets/img/{{thumbnail}}.png" alt="{{title}} Showcase" data-interchange="[{{root}}assets/img/{{thumbnail}}@2x.png, retina]">
+        </div>
       </div>
-      <div class="project--thumbnail">
-        <img src="{{root}}assets/img/{{project.thumbnail}}.png" alt="{{project.title}} Showcase" data-interchange="[{{root}}assets/img/{{project.thumbnail}}@2x.png, retina]">
+      {{#each testimonials}}
+      <div class="project__testimonial">
+        <blockquote class="testimonial">
+          <p class="testimonial__quote">"{{{quote}}}"</p>
+          <cite class="testimonial__cite">
+            <img class="testimonial__thumbnail" src="{{thumbnail}}" alt="{{cite}}">
+            {{cite}}
+          </cite>
+        </blockquote>
       </div>
-    </div>
-    <div class="testimonial">
-      {{#each project.testimonials as |testimonial|}}
-      <blockquote>
-        <p>{{testimonial.quote}}</p>
-        <cite>
-          <img class="testimonial--thumbnail" src="{{testimonial.thumbnail}}" alt="{{testimonial.cite}}">
-          {{testimonial.cite}}
-        </cite>
-      </blockquote>
       {{/each}}
     </div>
     {{/each}}
