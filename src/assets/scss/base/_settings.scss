@@ -440,7 +440,7 @@ $menu-border: $light-gray;
 
 $meter-height: 1rem;
 $meter-radius: $global-radius;
-$meter-background: $medium-gray;
+$meter-background: $light-gray;
 $meter-fill-good: $success-color;
 $meter-fill-medium: $warning-color;
 $meter-fill-bad: $alert-color;
@@ -498,9 +498,9 @@ $pagination-arrows: true;
 // ----------------
 
 $progress-height: 1rem;
-$progress-background: $medium-gray;
+$progress-background: $light-gray;
 $progress-margin-bottom: $global-margin;
-$progress-meter-background: $primary-color;
+$progress-meter-background: $medium-gray;
 $progress-radius: $global-radius;
 
 // 28. Responsive Embed

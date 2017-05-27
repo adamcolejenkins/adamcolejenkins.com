@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="970" height="120" viewBox="0 0 970 120">
+  <g fill="none" fill-rule="evenodd">
+
+    <!-- Track -->
+    <rect id="track" width="970" height="10" y="55" fill="#EEEEEE"/>
+
+    <!-- Front-End Development -->
+    <rect id="progress-front-end-development" width="922" height="10" y="55" fill="#87A1B5"/>
+    <polyline id="path-front-end-devalopment" stroke="#879DA3" points="922 50 922 15 707 15 707 0" opacity=".4"/>
+
+    <!-- UI/UX Design -->
+    <rect id="progress-ui-ux-design" width="824" height="10" y="55" fill="#8A8184"/>
+    <polyline id="path-ui-ux-design" stroke="#879DA3" points="824 50 824 34.677 268 34.677 268 0" opacity=".4"/>
+
+    <!-- Back-End Development -->
+    <rect id="progress-back-end-development" width="630" height="10" y="55" fill="#735950"/>
+    <polyline id="path-back-end-development" stroke="#879DA3" points="630 70 630 80.037 804.226 80.037 804.226 120" opacity=".4"/>
+
+    <!-- Server Administration -->
+    <rect id="progress-server-administration" width="582" height="10" y="55" fill="#DC8D6E"/>
+    <polyline id="path-server-administration" stroke="#879DA3" points="582 70 582 105.929 487 105.929 487 120" opacity=".4"/>
+
+    <!-- Database Architecture -->
+    <rect id="progress-database-architecture" width="388" height="10" y="55" fill="#FFA47F"/>
+    <polyline id="path-database-architecture" stroke="#879DA3" points="388.111 70 388.111 86.021 168 86.021 168 120" opacity=".4"/>
+
+  </g>
+</svg>

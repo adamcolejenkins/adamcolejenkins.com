@@ -1,0 +1,34 @@
+-
+  id: front-end-development
+  label: Front-end Development
+  tags: HTML, CSS, JavaScript, AngularJS
+  color: '#87A1B5'
+  level: 95
+
+-
+  id: ui-ux-design
+  label: UI/UX Prototyping & Design
+  tags: Sketch, Adobe Photoshop, Adobe Illustrator
+  color: '#8A8184'
+  level: 90
+
+-
+  id: back-end-development
+  label: Back-end Development
+  tags: PHP, Ruby, NodeJS
+  color: '#735950'
+  level: 85
+
+-
+  id: server-administration
+  label: Server Administration
+  tags: CENTOS, Redhat Enterprise, Ubuntu, Apache, NGINX
+  color: '#DC8D6E'
+  level: 70
+
+-
+  id: database-architecture
+  label: Database Architecture
+  tags: MySQL, PostgreSQL, MSSQL
+  color: '#FFA47F'
+  level: 45

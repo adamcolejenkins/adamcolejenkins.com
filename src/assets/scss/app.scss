@@ -47,8 +47,8 @@ $google-fonts: unquote("Montserrat:400,700,700i|Varela+Round");
 @include foundation-orbit;
 // @include foundation-pagination;
 @include foundation-progress-bar;
-// @include foundation-progress-element;
-// @include foundation-meter-element;
+@include foundation-progress-element;
+@include foundation-meter-element;
 // @include foundation-slider;
 // @include foundation-sticky;
 @include foundation-reveal;
@@ -79,6 +79,7 @@ $google-fonts: unquote("Montserrat:400,700,700i|Varela+Round");
 @import 'components/footer';
 @import 'components/projects';
 @import 'components/sections';
+@import 'components/skills';
 
 // Custom elements
 @import 'elements/buttons';
