@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="970" height="278" viewBox="0 0 970 278">
+  <g fill="none" fill-rule="evenodd" transform="translate(0 -2)">
+
+    <g id="skill-bar" transform="translate(0 82)">
+
+      <!-- Track -->
+      <rect id="skill-track" width="970" height="10" y="55" fill="#EEEEEE"/>
+
+      <!-- Front-End Development -->
+      <rect class="skill__meter" id="skill-progress-front-end-development" width="922" height="10" y="55" fill="#87A1B5"/>
+      <polyline class="skill__path" id="skill-path-front-end-development" stroke="#879DA3" points="922 50 922 15 707 15 707 0" opacity=".4"/>
+
+      <!-- UI/UX Design -->
+      <rect class="skill__meter" id="skill-progress-ui-ux-design" width="824" height="10" y="55" fill="#8A8184"/>
+      <polyline class="skill__path" id="skill-path-ui-ux-design" stroke="#879DA3" points="824 50 824 34.677 268 34.677 268 0" opacity=".4"/>
+
+      <!-- Back-End Development -->
+      <rect class="skill__meter" id="skill-progress-back-end-development" width="630" height="10" y="55" fill="#735950"/>
+      <polyline class="skill__path" id="skill-path-back-end-development" stroke="#879DA3" points="630 70 630 80.037 804.226 80.037 804.226 120" opacity=".4"/>
+
+      <!-- Server Administration -->
+      <rect class="skill__meter" id="skill-progress-server-administration" width="582" height="10" y="55" fill="#DC8D6E"/>
+      <polyline class="skill__path" id="skill-path-server-administration" stroke="#879DA3" points="582 70 582 105.929 487 105.929 487 120" opacity=".4"/>
+
+      <!-- Database Architecture -->
+      <rect class="skill__meter" id="skill-progress-database-architecture" width="388" height="10" y="55" fill="#FFA47F"/>
+      <polyline class="skill__path" id="skill-path-database-architecture" stroke="#879DA3" points="388.111 70 388.111 86.021 168 86.021 168 120" opacity=".4"/>
+
+    </g>
+
+    <g id="skill-label-ui-ux-design" class="skill__label" transform="translate(146)">
+      <text class="skill__label--strong">
+        <tspan x="13.424" y="15">UI/UX Prototyping &amp; Design</tspan>
+      </text>
+      <text class="skill__label--small" fill="#4A5F66">
+        <tspan x="36.681" y="42">Sketch, Adobe Photoshop, </tspan> <tspan x="69.217" y="66">Adobe Illustrator</tspan>
+      </text>
+    </g>
+
+    <g id="skill-label-front-end-development" class="skill__label" transform="translate(596)">
+      <text class="skill__label--strong">
+        <tspan x="16.428" y="15">Front-end Development</tspan>
+      </text>
+      <text class="skill__label--small" fill="#4A5F66">
+        <tspan x="37.937" y="42">HTML, CSS, JavaScript, </tspan> <tspan x="80.945" y="66">AngularJS</tspan>
+      </text>
+    </g>
+
+    <g id="skill-label-database-architecture" class="skill__label" transform="translate(57 207)">
+      <text class="skill__label--strong">
+        <tspan x="18.808" y="15">Database Architecture</tspan>
+      </text>
+      <text class="skill__label--small" fill="#4A5F66">
+        <tspan x="14.407" y="42">MySQL, PostgreSQL, MSSQL</tspan>
+      </text>
+    </g>
+
+    <g id="skill-label-server-administration" class="skill__label" transform="translate(379 207)">
+      <text class="skill__label--strong">
+        <tspan x="17.432" y="15">Server Administration</tspan>
+      </text>
+      <text class="skill__label--small" fill="#4A5F66">
+        <tspan x="13.5" y="42">CENTOS, Redhat Enterprise, </tspan> <tspan x="26.989" y="66">Ubuntu, Apache, NGINX</tspan>
+      </text>
+    </g>
+
+    <g id="skill-label-back-end-development" class="skill__label" transform="translate(695 207)">
+      <text class="skill__label--strong">
+        <tspan x="13.62" y="15">Back-end Development</tspan>
+      </text>
+      <text class="skill__label--small" fill="#4A5F66">
+        <tspan x="45.747" y="42">PHP, Ruby, NodeJS</tspan>
+      </text>
+    </g>
+  </g>
+</svg>
