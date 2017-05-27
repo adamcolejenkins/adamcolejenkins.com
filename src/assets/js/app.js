@@ -22,9 +22,6 @@
       this._init();
 
       Foundation.registerPlugin( this, 'App' );
-
-      // Debug
-      console.log( this );
     }
 
     /**
@@ -111,6 +108,114 @@
    * Window Exports
    */
   Foundation.plugin( App, 'App' );
+
+}( jQuery );
+
+
+!function ( $ ) {
+
+  class SkillBar {
+
+    /**
+     * Attach SkillBar as a Foundation Plugin
+     *
+     * @module foundation.skillbar
+     */
+    constructor( element, options ) {
+      this.$element = element;
+      this.options = $.extend( {}, SkillBar.defaults, this.$element.data(), options );
+
+      if ( 'function' !== typeof Snap ){
+        console.warn( 'Snap.svg not installed' );
+        return;
+      }
+
+      this._init();
+
+      Foundation.registerPlugin( this, 'SkillBar' );
+
+      // Debug
+      console.log( this );
+    }
+
+    /**
+     * Initialize the Skillbar
+     * @return {[type]} [description]
+     */
+    _init() {
+
+      // Initialize Snap element
+      this._createCanvas();
+
+      // Load SVG element
+      this._loadGraphicIntoCanvas();
+    }
+
+    /**
+     * Set up canvas, make responsive and create a group
+     *
+     * @function
+     * @private
+     * @requires Snap.svg
+     */
+    _createCanvas() {
+
+      // Wrap element into Snap struction
+      this.canvas = Snap( '#' + this.$element.attr( 'id' ) );
+
+      // Set image to responsive
+      const width = this.options.width;
+      const height = this.options.height;
+      this.canvas.attr( { viewBox: `0 0 ${width} ${height}` } );
+
+      // Set up a group
+      this.group = this.canvas.group();
+
+    }
+
+    /**
+     * Load SVG image and append to canvas
+     *
+     * @function
+     * @private
+     * @requires Snap.dvg
+     */
+    _loadGraphicIntoCanvas() {
+
+      this.SkillBar = Snap.load( this.options.skillBar, loadedFragment => {
+        console.log(loadedFragment);
+
+        this.group.append( loadedFragment );
+      } );
+
+    }
+
+  }
+
+  /**
+   * SkillBar defaults
+   * @type {Object}
+   */
+  SkillBar.defaults = {
+
+    /**
+     * Default width of canvas
+     * @type {Number}
+     */
+    width: 800,
+
+    /**
+     * Default height of canvas
+     * @type {Number}
+     */
+    height: 600,
+
+  }
+
+  /**
+   * Window Exports
+   */
+  Foundation.plugin( SkillBar, 'SkillBar' );
 
 }( jQuery );
 

@@ -66,8 +66,25 @@
     <h3 class="subheader">{{lang.skills.subheading}}</h3>
   </hgroup>
 
-  <div class="section__content">
+  <div class="section__content skills__content">
 
+    <div class="skills__content--desktop">
+      <svg id="skill-svg-out" data-width="970" data-height="284" data-skill-bar="{{root}}assets/img/skill-bar-with-labels.svg"></svg>
+    </div>
+
+    <div class="skills__content--mobile">
+      {{#each skills}}
+        <div class="skill" id="skill-{{this.id}}">
+          <div class="skill__blurb">
+            <h4>{{this.label}}</h4>
+            <p><small>{{this.tags}}</small></p>
+          </div>
+          <div class="skill__meter">
+            <progress class="skill__meter--{{this.id}}" max="100" value="{{this.level}}"></progress>
+          </div>
+        </div>
+      {{/each}}
+    </div>
   </div>
 </section>
 
