@@ -1,0 +1,80 @@
+// Skills component
+// adamcolejenkins.com
+// Licensed under Apache 2.0
+
+//
+// @group Components
+//
+
+$skill-palette: (
+  front-end-development: #87a1b5,
+  ui-ux-design: #8a8184,
+  back-end-development: #735950,
+  server-administration: #dc8d6e,
+  database-architecture: #ffa47f
+) !default;
+
+
+.skills {
+
+  &__content {
+    @include flex-align(center);
+
+    &--desktop {
+      @include show-for(medium);
+      @include flex-grid-column(12);
+
+      @include breakpoint(large) {
+        @include flex-grid-size(10);
+      };
+    }
+
+    &--mobile {
+      @include hide-for(medium);
+      @include flex-grid-column(10);
+    }
+  }
+
+}
+
+.skill {
+  margin-bottom: margin(2);
+
+  &__label {
+    // opacity: 0;
+
+    &--strong {
+      fill: $primary-color;
+      font-family: $header-font-family;
+      font-weight: $global-weight-bold;
+      font-size: 1rem;
+    }
+
+    &--small {
+      fill: $body-font-color;
+      font-family: $body-font-family;
+      font-size: rem-calc(14px);
+    }
+  }
+
+  &__meter {
+    // width: 0;
+  }
+
+
+  // Progress bar colors
+  @each $name, $color in $skill-palette {
+    &__meter--#{$name} {
+      // Internet Explorer sets the fill with color
+      color: $color;
+
+      &::-webkit-progress-value {
+        background: $color;
+      }
+
+      &::-moz-progress-bar {
+        background: $color;
+      }
+    }
+  }
+}
