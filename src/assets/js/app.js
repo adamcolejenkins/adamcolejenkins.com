@@ -34,6 +34,113 @@
       // Typing animation for headline
       this.startTypedHeadline();
 
+      // Logo
+      this.paintLogos();
+
+      // Create skills dots for resume
+      this.resumeSkillDots();
+
+      // Initialize print function
+      this.bindPrint();
+
+    }
+
+    resumeSkillDots() {
+
+      // Get canvases
+      const $skillCanvases = this.$element.find( '[data-level]' );
+      const canvasClass = 'skill-level__meter-dots';
+
+      $skillCanvases.each( function () {
+
+        const $this       = $( this );
+        const canvas      = Snap( this );
+        const maxLevel    = 5;
+        const strokeWidth = 2;
+
+        // Set dimensions
+        const width  = $this.attr( 'width' );
+        const height = $this.attr( 'height' );
+        const level  = $this.data( 'level' );
+
+        // Set canvas attributes
+        canvas.attr( {
+          class:   canvasClass,
+          viewBox: `0 0 ${width} ${height}`,
+        } );
+
+        // Create dots
+        for (var i = 1; i <= maxLevel; i++) {
+
+          let cr = ( height - ( strokeWidth * 2 ) ) / 2;
+          let cy = cr + strokeWidth;
+          let cx = ( ( ( width - ( strokeWidth * 2 ) ) / maxLevel ) * i ) - cr;
+          let filled = ( i <= level );
+
+          // Draw circle
+          let dot = canvas.circle( cx, cy, cr );
+
+          // Set fill and stroke
+          dot.attr( {
+            strokeWidth: strokeWidth,
+            class: `${canvasClass}--` + (( filled ) ? 'filled' : 'empty'),
+          } );
+
+        }
+
+      } );
+
+    }
+
+    bindPrint() {
+
+      const $print = this.$element.find( '[data-print]' );
+
+      $print.click( () => {
+        window.print();
+      } );
+
+    }
+
+    paintLogos() {
+
+      // Find logos
+      this.$logos = this.$element.find( '[data-logo]' );
+
+      // Add logo to each canvas
+      this.$logos.each( function () {
+
+        const $this = $( this );
+
+        // Wrap element into Snap struction
+        const canvas = Snap( this );
+        const color = $this.data( 'color' );
+        const source = $this.data( 'logo' );
+
+        // Set image to responsive
+        const width = $this.attr( 'width' );
+        const height = $this.attr( 'height' );
+        canvas.attr( { viewBox: `0 0 ${width} ${height}` } );
+
+        // Set up a group
+        const group = canvas.group();
+
+        Snap.load( source, loadedFragment => {
+
+          // Append loaded image to group
+          group.append( loadedFragment );
+
+          // Select all paths within the image (should be one)
+          group.selectAll( 'path' ).forEach( function ( $el ) {
+
+            // Set fill to data-color
+            $el.attr( { 'fill' : color } );
+
+          } );
+        } );
+
+      } );
+
     }
 
     startTypedHeadline() {
@@ -69,6 +176,13 @@
    * @type {Object}
    */
   App.defaults = {
+
+    styles: {
+
+      primaryColor: '#db8c6e',
+      secondaryColor: '#2d3a3e',
+
+    },
 
     /**
      * Typed plugin options
@@ -135,7 +249,7 @@
       Foundation.registerPlugin( this, 'SkillBar' );
 
       // Debug
-      console.log( this );
+      // console.log( this );
     }
 
     /**
@@ -183,7 +297,7 @@
     _loadGraphicIntoCanvas() {
 
       this.SkillBar = Snap.load( this.options.skillBar, loadedFragment => {
-        console.log(loadedFragment);
+        // console.log(loadedFragment);
 
         this.group.append( loadedFragment );
       } );

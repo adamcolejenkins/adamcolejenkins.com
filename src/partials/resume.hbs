@@ -1,0 +1,122 @@
+<div class="resume">
+
+  <div class="resume__toolbar">
+    <ul class="menu align-right">
+      <li><button type="button" data-close><i class="fa fa-close"></i></button></li>
+      <li><button type="button" data-print><i class="fa fa-print"></i></button></li>
+    </ul>
+  </div>
+
+  <div class="resume__profile">
+
+    <div class="resume__profile__header">
+      <div class="header">
+        <div class="header__logo">
+          <svg data-logo="{{site.logo}}" data-color="#db8c6e" width="100" height="100"></svg>
+        </div>
+        <div class="header__text">
+          <h1>{{resume.name}}</h1>
+          <p><strong>Hello</strong> {{resume.blurb}}</p>
+        </div>
+      </div>
+    </div><!--/ .resume__profile__header -->
+
+    <div class="resume__profile__contact">
+      <div class="table-list">
+        {{#each resume.contact}}
+        <div class="table-list__item">
+          <div class="table-list__item--label">
+            {{capitalize @key}}
+          </div>
+          <div class="table-list__item--text">
+            {{this}}
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div><!--/ .resume__profile__contact -->
+
+  </div><!--/ .resume__profile -->
+
+  <div class="resume__blurb">
+
+  </div><!--/ .resume__profile__blurb -->
+
+  <div class="resume__experience">
+    <h2 class="resume__header">Experience</h2>
+
+    <div class="resume__experience__container">
+      {{#each resume.experience}}
+      <div class="resume__experience__item">
+        <div class="resume__experience__item--left">
+          <h3>{{this.company}}</h3>
+          <p class="small">{{this.date}}</p>
+        </div>
+        <div class="resume__experience__item--right">
+          <h4>{{this.title}}</h4>
+          <ul>
+            {{#each this.duties}}
+            <li><span>{{this}}</span></li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+
+  <div class="resume__about">
+
+    <div class="resume__about__left">
+
+      <div class="resume__about__education">
+        <h2 class="resume__header">Education</h2>
+
+        {{#each resume.education}}
+        <h3>{{this.degree}}</h3>
+        <p>Graduated {{this.school}} {{this.year}}</p>
+        {{/each}}
+      </div>
+
+      <div class="resume__about__hobbies">
+        <h2 class="resume__header">Hobbies</h2>
+        <p>{{resume.hobbies}}</p>
+      </div>
+
+    </div>
+
+    <div class="resume__about__skills">
+      <h2 class="resume__header">Skills</h2>
+
+      {{#each resume.skills}}
+      <div class="skill-level">
+        <div class="skill-level__label">
+          <label for="">{{this.label}}</label>
+        </div>
+        <div class="skill-level__meter">
+          <svg data-level="{{this.level}}" width="120" height="16"></svg>
+        </div>
+      </div>
+      {{/each}}
+
+    </div>
+
+    <div class="resume__about__social">
+      <h2 class="resume__header">Social</h2>
+
+      <div class="table-list">
+        {{#each resume.social}}
+        <div class="table-list__item">
+          <div class="table-list__item--label">
+            {{this.outlet}}
+          </div>
+          <div class="table-list__item--text">
+            {{this.username}}
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div><!--/ .resume__about__social -->
+
+  </div><!--/ .resume__about -->
+</div><!--/ .resume -->

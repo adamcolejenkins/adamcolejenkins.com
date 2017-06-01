@@ -1,10 +1,100 @@
 name: Adam Cole Jenkins
-email: adam@frecklebit.com
 blurb: "I'm a hybrid Designer and Developer. The only thing more satisfying than solving a complex design problem: Taking it from conception to a beautifully rendered fruition."
-hobbies: Photography, Biking, Hiking, Crocheting, Gaming, and above all else... Dog Owner
+
+contact:
+  call: (314) 808-0838
+  email: adamcole83@gmail.com
+  web: adamcolejenkins.com
 
 social:
-  twitter: https://twitter.com/adamcole
-  linkedin: https://linkedin.com/in/adamcolejenkins
-  github: https://github.com/frecklebit
-  dribbble: https://dribbble.com/adamcole83
+  -
+    outlet: Twitter
+    username: "@adamcole"
+    url: https://twitter.com/adamcole
+
+  -
+    outlet: Linkedin
+    username: adamcolejenkins
+    url: https://linkedin.com/in/adamcolejenkins
+
+  -
+    outlet: Github
+    username: adamcolejenkins
+    url: https://github.com/adamcolejenkins
+
+  # -
+  #   outlet: Dribbble
+  #   username: adamcole83
+  #   url: https://dribbble.com/adamcole83
+
+  -
+    outlet: Skype
+    username: adamcole83
+    url: skype:adamcole83?call
+
+experience:
+  -
+    company: MU Health Care
+    title: Senior Web Developer
+    date: April 2011 - Present
+    duties:
+      - Received state-wide award for design and development of Mizzou Biojoint™ Center website.
+      - Administered 128 individual academic health center websites.
+      - Resigned and developed School of Medicine website with 476 number of pages ensuring ADA compliance and mobile responsive design.
+      - Developed website policies and guidelines to be used across the academic health center websites.
+      - Mentored junior developers on JavaScript, PHP and NodeJS development.
+      - Developed custom CMS suitable for securely running multiple websites using Laravel PHP Framework.
+      - Designed, developed and deployed mobile web application for patient-facing clinical use.
+      - Deployed and managed 5 RedHat Enterprise Linux web servers running Apache, PHP and MySQL.
+
+  -
+    company: Freelance
+    title: Web Designer & Developer
+    date: February 2011 - Present
+    duties:
+      - Worked on different projects including the design & development of various web components to market clients for sales increase.
+      - Performed Search Engine Optimization (SEO) and Search Engine Marketing (SEM) to increase traffic and enhance page ranking.
+      - Administered maintenance and upgrades for existing websites.
+      - Assisted agencies in web animation using JavaScript, HTML5 and CSS3.
+      - Completed all projects within budget and timeline.
+
+  -
+    company: Midcontinent Financial Center
+    title: Web Developer
+    date: September 2009 - February 2011
+    duties:
+      - Performed numerous A/B split tests to our landing pages resulting in an increase to our overall conversion rate by 150%.
+      - Designed, developed and managed 6 landing pages to attract sales.
+      - Produced and implemented detailed data models of MSSQL databases for web-generated leads.
+      - Designed several components of, and launched, multiple company marketing campaigns which included landing pages, banners, member registration, social media advertisements, and print collateral.
+
+education:
+
+  -
+    school: Full Sail University
+    degree: BS in Web Design & Development
+    year: 2013
+
+skills:
+
+  -
+    label: HTML, CSS, SASS, JavaScript, CoffeeScript
+    level: 5
+
+  -
+    label: Sketch, Adobe Photoshop, Webflow
+    level: 4
+
+  -
+    label: PHP, Ruby (RoR), NodeJS, GulpJS
+    level: 5
+
+  -
+    label: CENTOS, Debian, Apache, NGINX
+    level: 4
+
+  -
+    label: MySQL, PostgreSQL, MSSQL
+    level: 3
+
+hobbies: Photography, Biking, Hiking, Crocheting, Gaming, and above all else... Dog Owner

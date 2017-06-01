@@ -22,8 +22,9 @@ $footer-text-color: $medium-gray !default;
     text-align: center;
   }
 
-  .signature {
+  svg[data-logo] {
     display: block;
+    margin: 0 auto;
     margin-bottom: margin(3);
   }
 }
