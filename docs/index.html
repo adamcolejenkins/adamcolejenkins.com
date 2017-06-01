@@ -16,12 +16,12 @@
     </header>
 
     <section class="content" id="content" role="main">
-      <section id="fullscreen-hero" class="hero">
+      <section id="fullscreen-hero" class="hero hide-for-print">
         <div class="hero__container">
           <div class="hero__content">
       
             <a href="" class="hero__signature">
-              <img src="http://placehold.it/100x100?text=logo" alt="Adam Cole Jenkins">
+              <svg data-logo="assets/img/aj-logo.svg" data-color="#ffffff" width="100" height="100"></svg>
             </a>
       
             <h1 class="headline">
@@ -36,9 +36,9 @@
               </span>
             </h1>
       
-            <div class="button-group">
-              <a href="#resume" class="white button">Resumé</a>
-              <a href="#get-started" class="white button">I&#x27;m Available for Hire</a>
+            <div class="button-group modal-action">
+              <button class="white button" data-open="resume">Resumé</button>
+              <span class="modal-bg"></span>
             </div>
       
             <div class="hero__page-scroll">
@@ -52,7 +52,7 @@
         </div>
       </section>
       
-      <section id="experience" class="experience section">
+      <section id="experience" class="experience section hide-for-print">
         <hgroup class="section__header">
           <h2>My Experience</h2>
           <h3 class="subheader">I&#x27;ve got the chops in all phases of the design and development process.</h3>
@@ -77,7 +77,7 @@
         </div>
       </section>
       
-      <section id="skills" class="skills section">
+      <section id="skills" class="skills section hide-for-print">
         <hgroup class="section__header">
           <h2>Skills</h2>
           <h3 class="subheader">I&#x27;m comfortable working with both back-end and front-end technologies.</h3>
@@ -102,7 +102,7 @@
               <div class="skill" id="skill-ui-ux-design">
                 <div class="skill__blurb">
                   <h4>UI/UX Prototyping &amp; Design</h4>
-                  <p><small>Sketch, Adobe Photoshop, Adobe Illustrator</small></p>
+                  <p><small>Sketch, Adobe Photoshop, Webflow</small></p>
                 </div>
                 <div class="skill__meter">
                   <progress class="skill__meter--ui-ux-design" max="100" value="90"></progress>
@@ -139,7 +139,7 @@
         </div>
       </section>
       
-      <section id="work" class="section projects-section">
+      <section id="work" class="section projects-section hide-for-print">
         <hgroup class="section__header">
           <h2>My Work</h2>
           <h3 class="subheader">Want to see more examples? Email me!</h3>
@@ -206,30 +206,476 @@
         </div>
       </section>
       
+      <div class="show-for-print">
+        <div class="resume">
+        
+          <div class="resume__toolbar">
+            <ul class="menu align-right">
+              <li><button type="button" data-close><i class="fa fa-close"></i></button></li>
+              <li><button type="button" data-print><i class="fa fa-print"></i></button></li>
+            </ul>
+          </div>
+        
+          <div class="resume__profile">
+        
+            <div class="resume__profile__header">
+              <div class="header">
+                <div class="header__logo">
+                  <svg data-logo="assets/img/aj-logo.svg" data-color="#db8c6e" width="100" height="100"></svg>
+                </div>
+                <div class="header__text">
+                  <h1>Adam Cole Jenkins</h1>
+                  <p><strong>Hello</strong> I&#x27;m a hybrid Designer and Developer. The only thing more satisfying than solving a complex design problem: Taking it from conception to a beautifully rendered fruition.</p>
+                </div>
+              </div>
+            </div><!--/ .resume__profile__header -->
+        
+            <div class="resume__profile__contact">
+              <div class="table-list">
+                <div class="table-list__item">
+                  <div class="table-list__item--label">
+                    Call
+                  </div>
+                  <div class="table-list__item--text">
+                    (314) 808-0838
+                  </div>
+                </div>
+                <div class="table-list__item">
+                  <div class="table-list__item--label">
+                    Email
+                  </div>
+                  <div class="table-list__item--text">
+                    adamcole83@gmail.com
+                  </div>
+                </div>
+                <div class="table-list__item">
+                  <div class="table-list__item--label">
+                    Web
+                  </div>
+                  <div class="table-list__item--text">
+                    adamcolejenkins.com
+                  </div>
+                </div>
+              </div>
+            </div><!--/ .resume__profile__contact -->
+        
+          </div><!--/ .resume__profile -->
+        
+          <div class="resume__blurb">
+        
+          </div><!--/ .resume__profile__blurb -->
+        
+          <div class="resume__experience">
+            <h2 class="resume__header">Experience</h2>
+        
+            <div class="resume__experience__container">
+              <div class="resume__experience__item">
+                <div class="resume__experience__item--left">
+                  <h3>MU Health Care</h3>
+                  <p class="small">April 2011 - Present</p>
+                </div>
+                <div class="resume__experience__item--right">
+                  <h4>Senior Web Developer</h4>
+                  <ul>
+                    <li><span>Received state-wide award for design and development of Mizzou Biojoint™ Center website.</span></li>
+                    <li><span>Administered 128 individual academic health center websites.</span></li>
+                    <li><span>Resigned and developed School of Medicine website with 476 number of pages ensuring ADA compliance and mobile responsive design.</span></li>
+                    <li><span>Developed website policies and guidelines to be used across the academic health center websites.</span></li>
+                    <li><span>Mentored junior developers on JavaScript, PHP and NodeJS development.</span></li>
+                    <li><span>Developed custom CMS suitable for securely running multiple websites using Laravel PHP Framework.</span></li>
+                    <li><span>Designed, developed and deployed mobile web application for patient-facing clinical use.</span></li>
+                    <li><span>Deployed and managed 5 RedHat Enterprise Linux web servers running Apache, PHP and MySQL.</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="resume__experience__item">
+                <div class="resume__experience__item--left">
+                  <h3>Freelance</h3>
+                  <p class="small">February 2011 - Present</p>
+                </div>
+                <div class="resume__experience__item--right">
+                  <h4>Web Designer &amp; Developer</h4>
+                  <ul>
+                    <li><span>Worked on different projects including the design &amp; development of various web components to market clients for sales increase.</span></li>
+                    <li><span>Performed Search Engine Optimization (SEO) and Search Engine Marketing (SEM) to increase traffic and enhance page ranking.</span></li>
+                    <li><span>Administered maintenance and upgrades for existing websites.</span></li>
+                    <li><span>Assisted agencies in web animation using JavaScript, HTML5 and CSS3.</span></li>
+                    <li><span>Completed all projects within budget and timeline.</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="resume__experience__item">
+                <div class="resume__experience__item--left">
+                  <h3>Midcontinent Financial Center</h3>
+                  <p class="small">September 2009 - February 2011</p>
+                </div>
+                <div class="resume__experience__item--right">
+                  <h4>Web Developer</h4>
+                  <ul>
+                    <li><span>Performed numerous A/B split tests to our landing pages resulting in an increase to our overall conversion rate by 150%.</span></li>
+                    <li><span>Designed, developed and managed 6 landing pages to attract sales.</span></li>
+                    <li><span>Produced and implemented detailed data models of MSSQL databases for web-generated leads.</span></li>
+                    <li><span>Designed several components of, and launched, multiple company marketing campaigns which included landing pages, banners, member registration, social media advertisements, and print collateral.</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="resume__about">
+        
+            <div class="resume__about__left">
+        
+              <div class="resume__about__education">
+                <h2 class="resume__header">Education</h2>
+        
+                <h3>BS in Web Design &amp; Development</h3>
+                <p>Graduated Full Sail University 2013</p>
+              </div>
+        
+              <div class="resume__about__hobbies">
+                <h2 class="resume__header">Hobbies</h2>
+                <p>Photography, Biking, Hiking, Crocheting, Gaming, and above all else... Dog Owner</p>
+              </div>
+        
+            </div>
+        
+            <div class="resume__about__skills">
+              <h2 class="resume__header">Skills</h2>
+        
+              <div class="skill-level">
+                <div class="skill-level__label">
+                  <label for="">HTML, CSS, SASS, JavaScript, CoffeeScript</label>
+                </div>
+                <div class="skill-level__meter">
+                  <svg data-level="5" width="120" height="16"></svg>
+                </div>
+              </div>
+              <div class="skill-level">
+                <div class="skill-level__label">
+                  <label for="">Sketch, Adobe Photoshop, Webflow</label>
+                </div>
+                <div class="skill-level__meter">
+                  <svg data-level="4" width="120" height="16"></svg>
+                </div>
+              </div>
+              <div class="skill-level">
+                <div class="skill-level__label">
+                  <label for="">PHP, Ruby (RoR), NodeJS, GulpJS</label>
+                </div>
+                <div class="skill-level__meter">
+                  <svg data-level="5" width="120" height="16"></svg>
+                </div>
+              </div>
+              <div class="skill-level">
+                <div class="skill-level__label">
+                  <label for="">CENTOS, Debian, Apache, NGINX</label>
+                </div>
+                <div class="skill-level__meter">
+                  <svg data-level="4" width="120" height="16"></svg>
+                </div>
+              </div>
+              <div class="skill-level">
+                <div class="skill-level__label">
+                  <label for="">MySQL, PostgreSQL, MSSQL</label>
+                </div>
+                <div class="skill-level__meter">
+                  <svg data-level="3" width="120" height="16"></svg>
+                </div>
+              </div>
+        
+            </div>
+        
+            <div class="resume__about__social">
+              <h2 class="resume__header">Social</h2>
+        
+              <div class="table-list">
+                <div class="table-list__item">
+                  <div class="table-list__item--label">
+                    Twitter
+                  </div>
+                  <div class="table-list__item--text">
+                    @adamcole
+                  </div>
+                </div>
+                <div class="table-list__item">
+                  <div class="table-list__item--label">
+                    Linkedin
+                  </div>
+                  <div class="table-list__item--text">
+                    adamcolejenkins
+                  </div>
+                </div>
+                <div class="table-list__item">
+                  <div class="table-list__item--label">
+                    Github
+                  </div>
+                  <div class="table-list__item--text">
+                    adamcolejenkins
+                  </div>
+                </div>
+                <div class="table-list__item">
+                  <div class="table-list__item--label">
+                    Skype
+                  </div>
+                  <div class="table-list__item--text">
+                    adamcole83
+                  </div>
+                </div>
+              </div>
+            </div><!--/ .resume__about__social -->
+        
+          </div><!--/ .resume__about -->
+        </div><!--/ .resume -->
+        
+      </div>
+      <div id="resume" class="full reveal" data-reveal>
+        <div class="resume">
+        
+          <div class="resume__toolbar">
+            <ul class="menu align-right">
+              <li><button type="button" data-close><i class="fa fa-close"></i></button></li>
+              <li><button type="button" data-print><i class="fa fa-print"></i></button></li>
+            </ul>
+          </div>
+        
+          <div class="resume__profile">
+        
+            <div class="resume__profile__header">
+              <div class="header">
+                <div class="header__logo">
+                  <svg data-logo="assets/img/aj-logo.svg" data-color="#db8c6e" width="100" height="100"></svg>
+                </div>
+                <div class="header__text">
+                  <h1>Adam Cole Jenkins</h1>
+                  <p><strong>Hello</strong> I&#x27;m a hybrid Designer and Developer. The only thing more satisfying than solving a complex design problem: Taking it from conception to a beautifully rendered fruition.</p>
+                </div>
+              </div>
+            </div><!--/ .resume__profile__header -->
+        
+            <div class="resume__profile__contact">
+              <div class="table-list">
+                <div class="table-list__item">
+                  <div class="table-list__item--label">
+                    Call
+                  </div>
+                  <div class="table-list__item--text">
+                    (314) 808-0838
+                  </div>
+                </div>
+                <div class="table-list__item">
+                  <div class="table-list__item--label">
+                    Email
+                  </div>
+                  <div class="table-list__item--text">
+                    adamcole83@gmail.com
+                  </div>
+                </div>
+                <div class="table-list__item">
+                  <div class="table-list__item--label">
+                    Web
+                  </div>
+                  <div class="table-list__item--text">
+                    adamcolejenkins.com
+                  </div>
+                </div>
+              </div>
+            </div><!--/ .resume__profile__contact -->
+        
+          </div><!--/ .resume__profile -->
+        
+          <div class="resume__blurb">
+        
+          </div><!--/ .resume__profile__blurb -->
+        
+          <div class="resume__experience">
+            <h2 class="resume__header">Experience</h2>
+        
+            <div class="resume__experience__container">
+              <div class="resume__experience__item">
+                <div class="resume__experience__item--left">
+                  <h3>MU Health Care</h3>
+                  <p class="small">April 2011 - Present</p>
+                </div>
+                <div class="resume__experience__item--right">
+                  <h4>Senior Web Developer</h4>
+                  <ul>
+                    <li><span>Received state-wide award for design and development of Mizzou Biojoint™ Center website.</span></li>
+                    <li><span>Administered 128 individual academic health center websites.</span></li>
+                    <li><span>Resigned and developed School of Medicine website with 476 number of pages ensuring ADA compliance and mobile responsive design.</span></li>
+                    <li><span>Developed website policies and guidelines to be used across the academic health center websites.</span></li>
+                    <li><span>Mentored junior developers on JavaScript, PHP and NodeJS development.</span></li>
+                    <li><span>Developed custom CMS suitable for securely running multiple websites using Laravel PHP Framework.</span></li>
+                    <li><span>Designed, developed and deployed mobile web application for patient-facing clinical use.</span></li>
+                    <li><span>Deployed and managed 5 RedHat Enterprise Linux web servers running Apache, PHP and MySQL.</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="resume__experience__item">
+                <div class="resume__experience__item--left">
+                  <h3>Freelance</h3>
+                  <p class="small">February 2011 - Present</p>
+                </div>
+                <div class="resume__experience__item--right">
+                  <h4>Web Designer &amp; Developer</h4>
+                  <ul>
+                    <li><span>Worked on different projects including the design &amp; development of various web components to market clients for sales increase.</span></li>
+                    <li><span>Performed Search Engine Optimization (SEO) and Search Engine Marketing (SEM) to increase traffic and enhance page ranking.</span></li>
+                    <li><span>Administered maintenance and upgrades for existing websites.</span></li>
+                    <li><span>Assisted agencies in web animation using JavaScript, HTML5 and CSS3.</span></li>
+                    <li><span>Completed all projects within budget and timeline.</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="resume__experience__item">
+                <div class="resume__experience__item--left">
+                  <h3>Midcontinent Financial Center</h3>
+                  <p class="small">September 2009 - February 2011</p>
+                </div>
+                <div class="resume__experience__item--right">
+                  <h4>Web Developer</h4>
+                  <ul>
+                    <li><span>Performed numerous A/B split tests to our landing pages resulting in an increase to our overall conversion rate by 150%.</span></li>
+                    <li><span>Designed, developed and managed 6 landing pages to attract sales.</span></li>
+                    <li><span>Produced and implemented detailed data models of MSSQL databases for web-generated leads.</span></li>
+                    <li><span>Designed several components of, and launched, multiple company marketing campaigns which included landing pages, banners, member registration, social media advertisements, and print collateral.</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="resume__about">
+        
+            <div class="resume__about__left">
+        
+              <div class="resume__about__education">
+                <h2 class="resume__header">Education</h2>
+        
+                <h3>BS in Web Design &amp; Development</h3>
+                <p>Graduated Full Sail University 2013</p>
+              </div>
+        
+              <div class="resume__about__hobbies">
+                <h2 class="resume__header">Hobbies</h2>
+                <p>Photography, Biking, Hiking, Crocheting, Gaming, and above all else... Dog Owner</p>
+              </div>
+        
+            </div>
+        
+            <div class="resume__about__skills">
+              <h2 class="resume__header">Skills</h2>
+        
+              <div class="skill-level">
+                <div class="skill-level__label">
+                  <label for="">HTML, CSS, SASS, JavaScript, CoffeeScript</label>
+                </div>
+                <div class="skill-level__meter">
+                  <svg data-level="5" width="120" height="16"></svg>
+                </div>
+              </div>
+              <div class="skill-level">
+                <div class="skill-level__label">
+                  <label for="">Sketch, Adobe Photoshop, Webflow</label>
+                </div>
+                <div class="skill-level__meter">
+                  <svg data-level="4" width="120" height="16"></svg>
+                </div>
+              </div>
+              <div class="skill-level">
+                <div class="skill-level__label">
+                  <label for="">PHP, Ruby (RoR), NodeJS, GulpJS</label>
+                </div>
+                <div class="skill-level__meter">
+                  <svg data-level="5" width="120" height="16"></svg>
+                </div>
+              </div>
+              <div class="skill-level">
+                <div class="skill-level__label">
+                  <label for="">CENTOS, Debian, Apache, NGINX</label>
+                </div>
+                <div class="skill-level__meter">
+                  <svg data-level="4" width="120" height="16"></svg>
+                </div>
+              </div>
+              <div class="skill-level">
+                <div class="skill-level__label">
+                  <label for="">MySQL, PostgreSQL, MSSQL</label>
+                </div>
+                <div class="skill-level__meter">
+                  <svg data-level="3" width="120" height="16"></svg>
+                </div>
+              </div>
+        
+            </div>
+        
+            <div class="resume__about__social">
+              <h2 class="resume__header">Social</h2>
+        
+              <div class="table-list">
+                <div class="table-list__item">
+                  <div class="table-list__item--label">
+                    Twitter
+                  </div>
+                  <div class="table-list__item--text">
+                    @adamcole
+                  </div>
+                </div>
+                <div class="table-list__item">
+                  <div class="table-list__item--label">
+                    Linkedin
+                  </div>
+                  <div class="table-list__item--text">
+                    adamcolejenkins
+                  </div>
+                </div>
+                <div class="table-list__item">
+                  <div class="table-list__item--label">
+                    Github
+                  </div>
+                  <div class="table-list__item--text">
+                    adamcolejenkins
+                  </div>
+                </div>
+                <div class="table-list__item">
+                  <div class="table-list__item--label">
+                    Skype
+                  </div>
+                  <div class="table-list__item--text">
+                    adamcole83
+                  </div>
+                </div>
+              </div>
+            </div><!--/ .resume__about__social -->
+        
+          </div><!--/ .resume__about -->
+        </div><!--/ .resume -->
+        
+      </div>
+      
     </section>
 
     <footer class="footer section" role="contentinfo">
       <div class="section__content">
         <div class="footer__content">
-          <a href="" class="signature">
-            <img src="http://placehold.it/50x50?text=logo" alt="Adam Cole Jenkins">
+          <a href="" class="footer__signature">
+            <svg data-logo="assets/img/aj-logo.svg" data-color="#db8c6e" width="50" height="50"></svg>
           </a>
           <p>Handmade by me with ❤ © 2017.</p>
-          <p class="social-icons">
-            <a href="https://twitter.com/adamcole" target="_blank" title="Find me on Twitter">
-              <i class="fa fa-twitter"></i>
-            </a>
-            <a href="https://linkedin.com/in/adamcolejenkins" target="_blank" title="Find me on Linkedin">
-              <i class="fa fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/frecklebit" target="_blank" title="Find me on Github">
-              <i class="fa fa-github"></i>
-            </a>
-            <a href="https://dribbble.com/adamcole83" target="_blank" title="Find me on Dribbble">
-              <i class="fa fa-dribbble"></i>
-            </a>
+          <p class="social-media">
+              <a href="https://twitter.com/adamcole" title="Find me on Twitter" target="_blank">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <a href="https://linkedin.com/in/adamcolejenkins" title="Find me on Linkedin" target="_blank">
+                <i class="fa fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/adamcolejenkins" title="Find me on Github" target="_blank">
+                <i class="fa fa-github"></i>
+              </a>
+              <a href="skype:adamcole83?call" title="Find me on Skype" target="_blank">
+                <i class="fa fa-skype"></i>
+              </a>
           </p>
-          
         </div>
       </div>
       
