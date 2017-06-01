@@ -14,11 +14,14 @@
 a { @include transition; }
 
 // Add uppercase transform to h2
-h2 { @extend .uppercase; }
+h2 {
+  @extend .uppercase;
+  font-weight: $global-weight-normal;
+}
 
 // Add uppercase and primary color to h4
 h4 {
-  @extend h2;
+  @extend .uppercase;
   color: $primary-color;
 }
 
