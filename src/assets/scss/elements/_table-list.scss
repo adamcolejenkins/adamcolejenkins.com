@@ -1,0 +1,16 @@
+
+.table-list {
+
+  &__item {
+    @include flex-grid-row(nest);
+    margin-bottom: margin(.5);
+
+    &--label {
+      @include flex-grid-column(4);
+      font-weight: $global-weight-bold;
+    }
+    &--text {
+      @include flex-grid-column(8);
+    }
+  }
+}

@@ -85,7 +85,7 @@ $global-weight-bold: bold;
 $global-radius: 2px;
 $global-text-direction: ltr;
 $global-flexbox: false;
-$print-transparent-backgrounds: true;
+$print-transparent-backgrounds: false;
 
 $global-duration: 0.3s;
 $global-timing: ease;
@@ -515,14 +515,14 @@ $responsive-embed-ratios: (
 // 29. Reveal
 // ----------
 
-$reveal-background: $white;
+$reveal-background: $secondary-color;
 $reveal-width: 600px;
 $reveal-max-width: $global-width;
 $reveal-padding: $global-padding;
 $reveal-border: 1px solid $medium-gray;
 $reveal-radius: $global-radius;
 $reveal-zindex: 1005;
-$reveal-overlay-background: rgba($black, 0.45);
+$reveal-overlay-background: rgba($secondary-color, 0.45);
 
 // 30. Slider
 // ----------

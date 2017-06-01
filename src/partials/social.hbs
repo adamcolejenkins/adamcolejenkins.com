@@ -1,0 +1,10 @@
+<ul class="social-media">
+  {{#each resume.social}}
+  <li class="social-media__outlet--{{lowercase this.outlet}}">
+    <a href="{{this.url}}" title="Find me on {{capitalize this.outlet}}">
+      <i class="fa fa-{{lowercase this.outlet}}"></i>
+      <span>{{this.username}}</span>
+    </a>
+  </li>
+  {{/each}}
+</ul>
