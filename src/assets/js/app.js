@@ -31,6 +31,8 @@
      */
     _init() {
 
+      this._events();
+
       // Typing animation for headline
       this.startTypedHeadline();
 
@@ -43,6 +45,14 @@
       // Initialize print function
       this.bindPrint();
 
+    }
+
+    _events() {
+      $( window ).load( this._resizeHero ).resize( this._resizeHero );
+    }
+
+    _resizeHero() {
+      $( '#fullscreen-hero' ).height( $(window).height() );
     }
 
     resumeSkillDots() {

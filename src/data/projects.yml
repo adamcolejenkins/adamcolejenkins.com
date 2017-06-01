@@ -1,6 +1,6 @@
 -
   title: University of Missouri School of Medicine
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam unde vitae culpa eaque accusamus placeat, reiciendis ipsa possimus earum perferendis velit quaerat ducimus, facilis aut dolorum fugiat dolore asperiores explicabo incidunt omnis doloribus ullam! Molestiae ab consectetur laborum, esse distinctio voluptas eligendi ea itaque at ad? Culpa, quas atque id.
+  description: The University of Missouri School of Medicine was the first publicly supported medical school west of the Mississippi River. The website is the main hub for over 50 departments, centers and institutes.
   website: https://medicine.missouri.edu
   thumbnail: thumbnail-school-of-medicine
   tags: UI/UX Design, WordPress Theme Development
@@ -11,8 +11,8 @@
     #   thumbnail: https://api.adorable.io/avatars/100/adamcole
 
 -
-  title: Mizzou Biojoint™ Center
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, optio! Eligendi explicabo voluptas architecto molestiae, similique dignissimos iusto tempora rem harum voluptatem officiis qui reiciendis nostrum sed accusantium velit, fugit numquam. Laudantium officia, non itaque officiis blanditiis voluptatem, qui. Velit, totam excepturi maiores aliquam dicta ab ipsam sapiente assumenda commodi!
+  title: Mizzou BioJoint™ Center
+  description: Mizzou BioJointSM is the first and only treatment of its kind bringing biological solutions to knee, hip, shoulder, ankle and other joint problems.
   website: https://biojoint.com
   thumbnail: thumbnail-mizzou-biojoint-center
   tags: UI/UX Design, Handcoded using Zurb Foundation
@@ -24,7 +24,7 @@
 
 -
   title: A World Without Cancer
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et alias deserunt dicta explicabo enim modi officiis sapiente dolores adipisci id sunt ab perferendis praesentium obcaecati sit saepe itaque in incidunt cumque quasi a dolore tempora, eveniet odit. Laboriosam quam fugiat animi deserunt quasi, rem, dignissimos officiis consectetur obcaecati quaerat voluptatibus.
+  description: A World Without Cancer is a website promoting the 2015 partnership of MU Ellis Fischel Cancer Center and MD Anderson Cancer Network. Ellis Fischel is the only cancer center in central Missouri conducting trials and scientific research, leading to advancements in cancer treatments. 
   website: http://aworldwithoutcancer.com
   thumbnail: thumbnail-a-world-without-cancer
   tags: UI/UX Design, Handcoded using Zurb Foundation

@@ -1,0 +1,30 @@
+<div class="hero__container">
+  <div class="hero__content">
+
+    <a href="{{root}}" class="hero__signature">
+      <svg data-logo="{{site.logo}}" data-color="#ffffff" width="100" height="100"></svg>
+    </a>
+
+    {{!-- Animated Intro Text --}}
+    <h1 class="headline">
+      {{#headline lang.hero.words}}
+      <span class="intro">{{lang.hero.intro}}</span>
+      {{/headline}}
+    </h1>
+
+    {{!-- Modal Action --}}
+    <div class="button-group modal-action">
+      <button class="white button" data-open="resume">Resumé</button>
+      <span class="modal-bg"></span>
+    </div>
+
+    {{!-- Learn More --}}
+    <div class="hero__page-scroll">
+      <a href="#experience">
+        {{lang.hero.more}}
+        <i class="fa fa-chevron-down"></i>
+      </a>
+    </div>
+
+  </div>
+</div>

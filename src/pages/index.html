@@ -1,167 +1,40 @@
 <section id="fullscreen-hero" class="hero hide-for-print">
-  <div class="hero__container">
-    <div class="hero__content">
-
-      <a href="{{root}}" class="hero__signature">
-        <svg data-logo="{{site.logo}}" data-color="#ffffff" width="100" height="100"></svg>
-      </a>
-
-      {{!-- Animated Intro Text --}}
-      <h1 class="headline">
-        <span class="intro">{{lang.hero.intro}}</span>
-        <span data-headline></span>
-        <span data-headline-words>
-          {{#each lang.hero.words}}
-            <p>{{this}}</p>
-          {{/each}}
-        </span>
-      </h1>
-
-      {{!-- Modal Action --}}
-      <div class="button-group modal-action">
-        <button class="white button" data-open="resume">Resumé</button>
-        <span class="modal-bg"></span>
-      </div>
-
-      {{!-- Learn More --}}
-      <div class="hero__page-scroll">
-        <a href="#experience">
-          {{lang.hero.more}}
-          <i class="fa fa-chevron-down"></i>
-        </a>
-      </div>
-
-    </div>
-  </div>
+  {{> hero}}
 </section>
 
+{{#each [experience, skills, projects, about]}}
+  {{this}}
+{{/each}}
+
 <section id="experience" class="experience section hide-for-print">
-  <hgroup class="section__header">
-    <h2>{{lang.experience.heading}}</h2>
-    <h3 class="subheader">{{lang.experience.subheading}}</h3>
-  </hgroup>
+  {{> hgroup h2=lang.experience.heading h3=lang.experience.subheading}}
 
   <div class="section__content">
-    <div class="experience__item">
-      <i class="fa fa-3x fa-diamond"></i>
-      <h4>{{lang.experience.research.heading}}</h4>
-      <p>{{lang.experience.research.blurb}}</p>
-    </div>
-    <div class="experience__item">
-      <i class="fa fa-3x fa-tint"></i>
-      <h4>{{lang.experience.interface.heading}}</h4>
-      <p>{{lang.experience.interface.blurb}}</p>
-    </div>
-    <div class="experience__item">
-      <i class="fa fa-3x fa-code"></i>
-      <h4>{{lang.experience.code.heading}}</h4>
-      <p>{{lang.experience.code.blurb}}</p>
-    </div>
+    {{> experience}}
   </div>
 </section>
 
 <section id="skills" class="skills section hide-for-print">
-  <hgroup class="section__header">
-    <h2>{{lang.skills.heading}}</h2>
-    <h3 class="subheader">{{lang.skills.subheading}}</h3>
-  </hgroup>
-
-  <div class="section__content skills__content">
-
-    <div class="skills__content--desktop">
-      <svg id="skill-svg-out" data-width="970" data-height="284" data-skill-bar="{{root}}assets/img/skill-bar-with-labels.svg"></svg>
-    </div>
-
-    <div class="skills__content--mobile">
-      {{#each skills}}
-        <div class="skill" id="skill-{{this.id}}">
-          <div class="skill__blurb">
-            <h4>{{this.label}}</h4>
-            <p><small>{{this.tags}}</small></p>
-          </div>
-          <div class="skill__meter">
-            <progress class="skill__meter--{{this.id}}" max="100" value="{{this.level}}"></progress>
-          </div>
-        </div>
-      {{/each}}
-    </div>
-  </div>
-</section>
-
-<section id="work" class="section projects-section hide-for-print">
-  <hgroup class="section__header">
-    <h2>{{lang.projects.heading}}</h2>
-    <h3 class="subheader">{{lang.projects.subheading}}</h3>
-  </hgroup>
+  {{> hgroup h2=lang.skills.heading h3=lang.skills.subheading}}
 
   <div class="section__content">
-  {{#each projects}}
-    <div class="project">
-      <div class="project__showcase">
-        <div class="project__blurb">
-          <h3>{{title}}</h3>
-          <ul class="project__tags tags tags__strong">
-            <li><span>{{tags}}</span></li>
-          </ul>
-          <p>{{description}}</p>
-
-          {{#if website}}
-            <p><a href="{{website}}" class="button">Visit Website</a></p>
-          {{/if}}
-        </div>
-        <div class="project__thumbnail">
-          <img src="{{root}}assets/img/{{thumbnail}}.png" alt="{{title}} Showcase" srcset="{{root}}assets/img/{{thumbnail}}@2x.png 2x">
-        </div>
-      </div>
-      {{#each testimonials}}
-      <div class="project__testimonial">
-        <blockquote class="testimonial">
-          <p class="testimonial__quote">"{{{quote}}}"</p>
-          <cite class="testimonial__cite">
-            <img class="testimonial__thumbnail" src="{{thumbnail}}" alt="{{cite}}">
-            {{cite}}
-          </cite>
-        </blockquote>
-      </div>
-      {{/each}}
-    </div>
-    {{/each}}
+    {{> skills}}
   </div>
 </section>
 
-<section id="about" class="section about-section hide-for-print">
-  <hgroup class="section__header">
-    <h2>{{lang.about.heading}}</h2>
-    <h3 class="subheader">{{lang.about.subheading}}</h3>
-  </hgroup>
+<section id="work" class="section projects hide-for-print">
+  {{> hgroup h2=lang.projects.heading h3=lang.projects.subheading}}
 
-  <div class="about section__content">
-    <div class="about__blurb">
-      <img class="rounded" src="{{gravatar resume.contact.email 220}}" srcset="{{gravatar resume.contact.email 440}} 2x" alt="{{site.title}}, {{site.headline}}">
+  <div class="section__content">
+    {{> work}}
+  </div>
+</section>
 
-      <h4>Hello</h4>
-      <p>{{resume.blurb}}</p>
-    </div>
-    <div class="about__facts">
-      <h4>{{lang.about.education}}</h4>
+<section id="about" class="about section hide-for-print">
+  {{> hgroup h2=lang.about.heading h3=lang.about.subheading}}
 
-      <div class="about__facts__education">
-        {{#each resume.education}}
-          <h5>{{this.degree}}</h5>
-          <p>Graduated {{this.year}} {{this.school}}</p>
-        {{/each}}
-      </div>
-
-      <div class="about__facts__hobbies">
-        <h4>{{lang.about.hobbies}}</h4>
-        <p>{{resume.hobbies}}</p>
-      </div>
-
-      <div class="about__facts__memphis">
-        <img src="{{root}}/assets/img/memphis-photo.png" srcset="{{root}}assets/img/memphis-photo@2x.png 2x" alt="Memphis">
-        {{lang.about.memphis}}
-      </div>
-    </div>
+  <div class="section__content">
+    {{> about}}
   </div>
 </section>
 

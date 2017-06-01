@@ -1,0 +1,35 @@
+{{!-- Profile Blurb --}}
+<div class="about__blurb">
+
+  {{!-- Gravatar Image --}}
+  <img class="rounded" src="{{gravatar resume.contact.email 220}}" srcset="{{gravatar resume.contact.email 440}} 2x" alt="{{site.title}}, {{site.headline}}">
+
+  <h4>Hello</h4>
+  <p>{{resume.blurb}}</p>
+
+</div>
+
+{{!-- Quick Facts --}}
+<div class="about__facts">
+
+  {{!-- Education --}}
+  <div class="about__facts__education">
+    <h4>{{lang.about.education}}</h4>
+    {{#each resume.education}}
+      <h5>{{this.degree}}</h5>
+      <p>Graduated {{this.year}} {{this.school}}</p>
+    {{/each}}
+  </div>
+
+  {{!-- Hobbies --}}
+  <div class="about__facts__hobbies">
+    <h4>{{lang.about.hobbies}}</h4>
+    <p>{{resume.hobbies}}</p>
+  </div>
+
+  {{!-- Memphis --}}
+  <div class="about__facts__memphis">
+    <img src="{{root}}/assets/img/memphis-photo.png" srcset="{{root}}assets/img/memphis-photo@2x.png 2x" alt="Memphis">
+    {{lang.about.memphis}}
+  </div>
+</div>

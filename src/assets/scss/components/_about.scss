@@ -7,7 +7,6 @@
 //
 
 .about {
-  @include flex-align(center);
   text-align: center;
 
   &__blurb,
@@ -15,7 +14,7 @@
     @include flex-grid-column(12);
 
     @include breakpoint(medium) {
-      @include flex-grid-size(4);
+      @include flex-grid-size(5);
     };
   }
 

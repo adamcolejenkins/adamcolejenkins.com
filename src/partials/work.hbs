@@ -1,0 +1,36 @@
+{{#each projects}}
+  <div class="project">
+
+    {{!-- Showcase --}}
+    <div class="project__showcase">
+
+      {{!-- Blurb --}}
+      <div class="project__blurb">
+
+        <h3>{{title}}</h3>
+        <ul class="project__tags tags tags__strong">
+          <li><span>{{tags}}</span></li>
+        </ul>
+        <p>{{description}}</p>
+
+        {{#if website}}
+          <p><a href="{{website}}" class="button">Visit Website</a></p>
+        {{/if}}
+
+      </div>
+
+      {{!-- Thumbnail --}}
+      <div class="project__thumbnail">
+        <img src="{{root}}assets/img/{{thumbnail}}.png" alt="{{title}} Showcase" srcset="{{root}}assets/img/{{thumbnail}}@2x.png 2x">
+      </div>
+
+    </div>
+
+    {{#each testimonials}}
+    <div class="project__testimonial">
+      {{> testimonial}}
+    </div>
+    {{/each}}
+
+  </div>
+{{/each}}

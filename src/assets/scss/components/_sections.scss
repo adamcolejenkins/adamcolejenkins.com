@@ -20,6 +20,7 @@ $section-header-margin-bottom: margin(3) !default;
   &__header,
   &__content {
     @include flex-grid-row;
+    @include flex-align(center);
   }
 
   &__header {
