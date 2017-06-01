@@ -15,7 +15,7 @@ $project-bg-color: $light-gray !default;
 $project-spacing: margin(4) !default;
 
 // Project section styles
-.projects-section {
+.projects.section {
   background-color: $project-bg-color;
 
   @include breakpoint(medium) {

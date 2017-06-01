@@ -16,17 +16,17 @@ experience:
   research:
     heading: Research
     icon: assets/img/icon-research.svg
-    blurb: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati velit enim expedita sit nisi quia a impedit, animi minus, explicabo dolores quod blanditiis ipsum fugiat, consectetur, omnis tempora molestias at.
+    blurb: I collaborate with clients and peers to nurture and transform ideas into well thought out design specs. After all, that's where the majority of amazing user experiences start.
 
   interface:
     heading: UI/UX
     icon: assets/img/icon-ui-ux.svg
-    blurb: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat eaque libero explicabo similique harum possimus exercitationem sit aut est labore culpa quam ab esse fugit, debitis suscipit consequuntur ex cumque!
+    blurb: I sketch and wireframe interfaces focusing on content structure, intuitive UI patterns and simple interactions. I'm a minimalist who truly believes that less is more.
 
   code:
     heading: Code
     icon: assets/img/icon-code.svg
-    blurb: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem repellat enim nemo adipisci, voluptate distinctio quia odio error qui molestiae atque similique dolores aspernatur debitis rem minus maxime aliquid delectus.
+    blurb: I design in the browser with HTML(5), CSS(3) and a touch of JavaScript. I love coding things from scratch, but I can work with front-end frameworks like Bootstrap too.
 
 skills:
   heading: Skills
@@ -40,6 +40,10 @@ projects:
 about:
   heading: About
   subheading: My passion for elegance
+  hello: Hello
+  education: Education
+  hobbies: Hobbies
+  memphis: ← This is Memphis
 
 action:
   heading: Want to work together?
