@@ -1,0 +1,15 @@
+<div class="section__content">
+  <div class="footer__content">
+    <a href="{{root}}" class="footer__signature">
+      <svg data-logo="{{site.logo}}" data-color="#db8c6e" width="50" height="50"></svg>
+    </a>
+    <p>{{lang.footer.copyright}}</p>
+    <p class="social-media">
+      {{#each resume.social}}
+        <a href="{{this.url}}" title="Find me on {{this.outlet}}" target="_blank">
+          <i class="fa fa-{{lowercase this.outlet}}"></i>
+        </a>
+      {{/each}}
+    </p>
+  </div>
+</div>

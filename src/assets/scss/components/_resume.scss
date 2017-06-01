@@ -1,0 +1,186 @@
+
+$resume-bg-color: $secondary-color !default;
+
+$resume-font-color: scale-color($secondary-color, $lightness: 80%) !default;
+
+$resume-header-color: scale-color($secondary-color, $lightness: 50%);
+
+$resume-small-color: scale-color($secondary-color, $lightness: 25%);
+
+$resume-print-size-adjust: 65% !default;
+
+.resume {
+  color: $resume-font-color;
+
+  &__toolbar,
+  &__header,
+  &__experience__item,
+  &__education {
+    margin-bottom: margin();
+  }
+
+  &__toolbar,
+  &__header {
+    @include flex-grid-column(12, 0);
+  }
+
+  &__toolbar {
+    @extend .hide-for-print;
+
+    .menu {
+      > li > button {
+        color: $primary-color;
+        padding: $menu-item-padding;
+        font-size: 1.25rem;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__profile,
+  &__experience,
+  &__blurb,
+  &__about {
+    @include flex-grid-row;
+    margin-bottom: margin(2);
+  }
+
+  &__profile {
+    @include flex-align(null, middle);
+  }
+
+  &__profile__header {
+    @include flex-grid-column;
+  }
+  &__profile__contact {
+    @include flex-grid-column(3);
+  }
+
+  .header {
+    @include flex-grid-row(nest);
+
+    &__logo {
+      @include flex-grid-column(shrink);
+    }
+    &__text {
+      @include flex-grid-column(expand);
+    }
+  }
+
+  &__about__left {
+    @include flex-grid-column(4);
+  }
+
+  &__about__skills {
+    @include flex-grid-column(expand);
+  }
+
+  &__about__social {
+    @include flex-grid-column(3);
+  }
+
+  &__experience {
+
+    .resume__header,
+    &__container {
+      @include flex-grid-column(12);
+    }
+
+    &__item {
+      @include flex-grid-row(nest);
+
+      &--left {
+        @include flex-grid-column(4);
+      }
+      &--right {
+        @include flex-grid-column(8);
+      }
+    }
+  }
+
+  .skill-level {
+    @include flex-grid-row(nest);
+    @include flex-align(null, middle);
+    width: 100%;
+
+    &__label {
+      @include flex-grid-column(expand);
+    }
+    &__meter {
+      @include flex-grid-column(shrink);
+
+      &-dots {
+        &--filled,
+        &--empty {
+          stroke: $primary-color;
+          fill: none;
+        }
+        &--filled { fill: $primary-color; }
+      }
+    }
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: $global-weight-normal;
+  }
+
+  h1, h3 {
+    color: $resume-font-color;
+  }
+
+  h2 {
+    @extend h4;
+  }
+
+  p.small { color: $resume-small-color; }
+
+  label {
+    color: $resume-font-color;
+  }
+
+  .progress {
+    margin-bottom: margin(.75);
+    &-meter {
+      &-text {
+        position: relative;
+        margin-left: .25rem;
+      }
+    }
+  }
+
+  .no-bullet {
+    li {
+      margin-bottom: margin(.25);
+    }
+    i {
+      font-size: 1.25rem;
+      margin-right: margin();
+    }
+  }
+
+}
+
+@media print {
+
+  html { font-size: $resume-print-size-adjust; }
+  body { font-family: $helvetica !important; color: $medium-gray !important; }
+  h4 { color: $primary-color !important; }
+  p.small { color: $light-gray !important; }
+  svg[data-logo] { width: $resume-print-size-adjust * 1.15; height: $resume-print-size-adjust * 1.15; }
+
+  .resume {
+    &__profile,
+    &__experience,
+    &__blurb,
+    &__about {
+      margin-bottom: margin();
+    }
+
+    svg[data-level] {
+      width: 80px !important;
+    }
+  }
+
+}
