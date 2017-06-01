@@ -1,0 +1,34 @@
+// About component
+// adamcolejenkins.com
+// Licensed under Apache 2.0
+
+//
+// @group Components
+//
+
+.about {
+  @include flex-align(center);
+  text-align: center;
+
+  &__blurb,
+  &__facts {
+    @include flex-grid-column(12);
+
+    @include breakpoint(medium) {
+      @include flex-grid-size(4);
+    };
+  }
+
+  &__blurb .rounded {
+    border-radius: 50%;
+    margin-bottom: margin();
+  }
+
+  &__facts {
+    &__education,
+    &__hobbies,
+    &__memphis {
+      margin-bottom: margin(2);
+    }
+  }
+}

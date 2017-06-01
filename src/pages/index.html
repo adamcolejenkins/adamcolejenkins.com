@@ -110,7 +110,7 @@
           {{/if}}
         </div>
         <div class="project__thumbnail">
-          <img src="{{root}}assets/img/{{thumbnail}}.png" alt="{{title}} Showcase" data-interchange="[{{root}}assets/img/{{thumbnail}}@2x.png, retina]">
+          <img src="{{root}}assets/img/{{thumbnail}}.png" alt="{{title}} Showcase" srcset="{{root}}assets/img/{{thumbnail}}@2x.png 2x">
         </div>
       </div>
       {{#each testimonials}}
@@ -126,6 +126,42 @@
       {{/each}}
     </div>
     {{/each}}
+  </div>
+</section>
+
+<section id="about" class="section about-section hide-for-print">
+  <hgroup class="section__header">
+    <h2>{{lang.about.heading}}</h2>
+    <h3 class="subheader">{{lang.about.subheading}}</h3>
+  </hgroup>
+
+  <div class="about section__content">
+    <div class="about__blurb">
+      <img class="rounded" src="{{gravatar resume.contact.email 220}}" srcset="{{gravatar resume.contact.email 440}} 2x" alt="{{site.title}}, {{site.headline}}">
+
+      <h4>Hello</h4>
+      <p>{{resume.blurb}}</p>
+    </div>
+    <div class="about__facts">
+      <h4>{{lang.about.education}}</h4>
+
+      <div class="about__facts__education">
+        {{#each resume.education}}
+          <h5>{{this.degree}}</h5>
+          <p>Graduated {{this.year}} {{this.school}}</p>
+        {{/each}}
+      </div>
+
+      <div class="about__facts__hobbies">
+        <h4>{{lang.about.hobbies}}</h4>
+        <p>{{resume.hobbies}}</p>
+      </div>
+
+      <div class="about__facts__memphis">
+        <img src="{{root}}/assets/img/memphis-photo.png" srcset="{{root}}assets/img/memphis-photo@2x.png 2x" alt="Memphis">
+        {{lang.about.memphis}}
+      </div>
+    </div>
   </div>
 </section>
 
