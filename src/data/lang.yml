@@ -26,7 +26,7 @@ experience:
   code:
     heading: Code
     icon: assets/img/icon-code.svg
-    blurb: I design in the browser with HTML(5), CSS(3) and a touch of JavaScript. I love coding things from scratch, but I can work with front-end frameworks like Bootstrap too.
+    blurb: I design in the browser with HTML(5), CSS(3) and a touch of JavaScript. I love coding things from scratch, but I can work with front-end frameworks like Zurb Foundation and Twitter Bootstrap, too.
 
 skills:
   heading: Skills
